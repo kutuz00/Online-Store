@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>Products</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -51,17 +52,17 @@
                                             <li>Jackets/vests </li>
                                         </ul>
                                     </div>
-                                </details> <input class="input" placeholder="Search for Item..."></input> <button
-                                    class="submit" type="submit"><span class="fa fa-search"></span></button>
+                                </details> <input class="input" placeholder="Search for Item..."> <button class="submit"
+                                    type="submit"><span class="fa fa-search"></span></button>
                             </form>
                         </div>
                     </div>
                     <aside class="top-right">
                         <nav>
 
-                            <div class="cart"><a href="#"><img src="img/cart.svg"></a>
+                            <div class="cart"><a href="#"><img src="img/cart.svg" alt="cart"></a>
                                 <div class="cart-container">
-                                    <div class="item-in-cart"><img src="img/cart-item-img.png" class="">
+                                    <div class="item-in-cart"><img src="img/cart-item-img.png" alt="item">
                                         <div class="item-description">
                                             <h3 class="cart-item-name">Rebox Zane</h3>
                                             <div class="rate"><span class="far fa-star"></span>
@@ -76,7 +77,7 @@
                                     </div>
 
 
-                                    <div class="item-in-cart"><img src="img/cart-item-img-2.png">
+                                    <div class="item-in-cart"><img src="img/cart-item-img-2.png" alt="item">
                                         <div class="item-description">
                                             <h3 class="cart-item-name">Rebox Zane</h3>
                                             <div class="rate"><span class="far fa-star"></span>
@@ -401,34 +402,17 @@
                 <div class="sp-banner-top container">
                     <h2 class="accent-txt sp-banner-left">New Arrivals </h2>
                     <span class="sp-banner-right">Home /</span><span class="sp-banner-right">Men / </span> <b><span
-                            class="accent-txt sp-banner-right">New Arrivals</span> </b></h4>
+                            class="accent-txt sp-banner-right">New Arrivals</span> </b>
                 </div>
 
             </header>
             <article class="catalog container">
                 <nav>
                     <details>
-                        <ul>
-                            <li>Accessories</li>
-                            <li>Bags</li>
-                            <li>Denim</li>
-                            <li>Hoodies & Sweatshirts</li>
-                            <li>Jackets & Coats</li>
-                            <li>Pants</li>
-                            <li>Polos</li>
-                            <li>Shirts</li>
-                            <li>Shoes</li>
-                            <li>Shorts</li>
-                            <li>Sweaters & Knits</li>
-                            <li>T-Shirts</li>
-                            <li>Tanks</li>
-                        </ul>
-                        <summary>
+                        <summary class="producs-menu-category">
                             Category
                         </summary>
-                    </details>
-                    <details>
-                        <ul>
+                        <ul class="products-menu">
                             <li>Accessories</li>
                             <li>Bags</li>
                             <li>Denim</li>
@@ -443,12 +427,13 @@
                             <li>T-Shirts</li>
                             <li>Tanks</li>
                         </ul>
-                        <summary>
+
+                    </details>
+                    <details>
+                        <summary class="producs-menu-category">
                             BRAND
                         </summary>
-                    </details>
-                    <details>
-                        <ul>
+                        <ul class="products-menu">
                             <li>Accessories</li>
                             <li>Bags</li>
                             <li>Denim</li>
@@ -463,13 +448,80 @@
                             <li>T-Shirts</li>
                             <li>Tanks</li>
                         </ul>
-                        <summary>
+
+                    </details>
+                    <details>
+                        <summary class="producs-menu-category">
                             DESIGNER
                         </summary>
+                        <ul class="products-menu">
+                            <li>Accessories</li>
+                            <li>Bags</li>
+                            <li>Denim</li>
+                            <li>Hoodies & Sweatshirts</li>
+                            <li>Jackets & Coats</li>
+                            <li>Pants</li>
+                            <li>Polos</li>
+                            <li>Shirts</li>
+                            <li>Shoes</li>
+                            <li>Shorts</li>
+                            <li>Sweaters & Knits</li>
+                            <li>T-Shirts</li>
+                            <li>Tanks</li>
+                        </ul>
+
                     </details>
                 </nav>
                 <div class="products-wrap">
-                    <div class="filters"></div>
+
+                    <form class="filters" action="#">
+                        <fieldset>
+                            <legend>Trending now<legend></legend>
+
+                                Bohemian | Floral | Lace
+                                Floral | Lace | Bohemian
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Size<legend></legend>
+
+                                <input type="checkbox"> <label>XXS</label>
+                                <input type="checkbox"> <label>XS</label>
+                                <input type="checkbox"> <label>S</label>
+                                <input type="checkbox"> <label>M</label>
+                                <input type="checkbox"> <label>L</label>
+                                <input type="checkbox"> <label>XL</label>
+                                <input type="checkbox"> <label>XXL</label>
+                        </fieldset>
+
+
+
+                        <fieldset>
+                            <legend>Price<legend></legend>
+                                <label for="price">$0</label>
+                                <input id="price" type="range" min="0" max="400" step="50">
+                                <label for="price">$400</label>
+                        </fieldset>
+                    </form>
+                    <div class="sort">
+                        <form action="">
+                            <label>
+                                Sort By
+                            </label>
+                            <select>
+                                <option>12</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div>Product Content 123</div>
+                    <div>
+                        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+
+
+                    </div>
+
+
+                </div>
             </article>
 
 
@@ -479,7 +531,30 @@
 
 
 
-            <footer>
+            <footer class="product-footer">
+                <div class="container offer-deteil">
+                    <div class="offer-deteil-wrap"> <img src="img/truck.svg" alt="truck">
+                        <h1>Delivery</h1>
+                        <p> Worldwide delivery on all. Authorit tively morph next-generation innov tion with
+                            extensive
+                            models.</p>
+                    </div>
+                    <div class="offer-deteil-wrap"> <img src="img/discount.svg" alt="discount">
+                        <h1>Sales & discounts</h1>
+                        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with
+                            extensive
+                            models.</p>
+                    </div>
+                    <div class="offer-deteil-wrap"><img src="img/crown.svg" alt="crown">
+                        <h1>Quality assurance</h1>
+                        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with
+                            extensive
+                            models.</p>
+                    </div>
+
+
+
+                </div>
 
             </footer>
         </article>
@@ -492,90 +567,96 @@
 
 
 
-    <!-- <footer class="footer">
-        <article class="footer-top">
-            <div class="footer-top-content container">
-                <aside class="footer-message"> <img src="img/contact-image-shape.png" alt="photo">
-                    <div class="message-wrap">
-                        <blockquote>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
-                            condimentum a. Aliquam condimentum mattis neque sed pretium” </blockquote>
-                        <footer>
-                            <h4 class="accent-txt">Burhan</h4>
-                            <p>Dhaka, Bd </p>
-                        </footer>
+    <!-- <footer class=" footer">
+                        <article class="footer-top">
+                            <div class="footer-top-content container">
+                                <aside class="footer-message"> <img src="img/contact-image-shape.png" alt="photo">
+                                    <div class="message-wrap">
+                                        <blockquote>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a
+                                            pulvinar purus
+                                            condimentum a. Aliquam condimentum mattis neque sed pretium”
+                                        </blockquote>
+                                        <footer>
+                                            <h4 class="accent-txt">Burhan</h4>
+                                            <p>Dhaka, Bd </p>
+                                        </footer>
 
 
-                        <div class="dots">
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                        </div>
-                    </div>
-                </aside>
-                <div class="footer-line"> </div>
-                <div class="footer-subscribe">
-                    <h1 class="subscribe-h1">Subscribe</h1>
-                    <p class="subscribe-p">FOR OUR NEWLETTER AND PROMOTION</p>
-                    <form class="subscribe" action="#"> <input class="subscribe-form-input"
-                            placeholder="Enter Your Email"><button class="subscribe-form-button"
-                            type="submit">Subscribe</button></input> </form>
-                </div>
-            </div>
-        </article>
-        <article class="footer-bottom container">
-            <div class="our-testamony">
-                <div class="logo "> <a class="logo-link" href="index.html">
-                        <h1 class="logo-txt"> Bran<span class="accent-txt accent-font">d</span></h1>
-                    </a></div>
-                <p class="space-footer-p">Objectively transition extensive data rather than cross functional solutions.
-                    Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly
-                    syndicate an expanded array of processes and cross-unit partnerships.</p>
-                <p>Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior
-                    initiatives for wireless technologies. Dynamically optimize. </p>
-            </div>
-            <nav class="links">
-                <div>
-                    <h2 class="links-header accent-txt">COMPANY</h2>
-                    <ul class="links-ul">
-                        <li> Home</li>
-                        <li>Shop</li>
-                        <li>About</li>
-                        <li>How It Works</li>
-                        <li> Contact</li>
-                    </ul>
-                </div>
-                <div>
-                    <h2 class="links-header accent-txt">INFORMATION</h2>
-                    <ul class="links-ul">
-                        <li>Tearms & Condition</li>
-                        <li> Privacy Policy</li>
-                        <li>How to Buy</li>
-                        <li>How to Sell</li>
-                        <li>Promotion</li>
-                    </ul>
-                </div>
-                <div>
-                    <h2 class="links-header accent-txt">SHOP CATEGORY</h2>
-                    <ul class="links-ul">
-                        <li>Men</li>
-                        <li> Women</li>
-                        <li>Child</li>
-                        <li> Apparel</li>
-                        <li>Brows All</li>
-                    </ul>
-                </div>
-            </nav>
-        </article>
-        <article class="footer-end">
-            <div class="rights-social container">
-                <p> © 2017 Brand All Rights Reserved.</p>
-                <div class="social-links"> <span class="fab fa-facebook"></span> <span class="fab fa-twitter"></span>
-                    <span class="fab fa-linkedin"></span> <span class="fab fa-pinterest"></span> <span
-                        class="fab fa-google-plus"></span>
-                </div>
-            </div>
-        </article>
-    </footer> -->
+                                        <div class="dots">
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                        </div>
+                                    </div>
+                                </aside>
+                                <div class="footer-line"> </div>
+                                <div class="footer-subscribe">
+                                    <h1 class="subscribe-h1">Subscribe</h1>
+                                    <p class="subscribe-p">FOR OUR NEWLETTER AND PROMOTION</p>
+                                    <form class="subscribe" action="#"> <input class="subscribe-form-input"
+                                            placeholder="Enter Your Email"><button class="subscribe-form-button"
+                                            type="submit">Subscribe</button> </form>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="footer-bottom container">
+                            <div class="our-testamony">
+                                <div class="logo "> <a class="logo-link" href="index.html">
+                                        <h1 class="logo-txt"> Bran<span class="accent-txt accent-font">d</span></h1>
+                                    </a></div>
+                                <p class="space-footer-p">Objectively transition extensive data rather than cross
+                                    functional solutions.
+                                    Monotonectally syndicate multidisciplinary materials before go forward benefits.
+                                    Intrinsicly
+                                    syndicate an expanded array of processes and cross-unit partnerships.</p>
+                                <p>Efficiently plagiarize 24/365 action items and focused infomediaries.
+                                    Distinctively seize superior
+                                    initiatives for wireless technologies. Dynamically optimize. </p>
+                            </div>
+                            <nav class="links">
+                                <div>
+                                    <h2 class="links-header accent-txt">COMPANY</h2>
+                                    <ul class="links-ul">
+                                        <li> Home</li>
+                                        <li>Shop</li>
+                                        <li>About</li>
+                                        <li>How It Works</li>
+                                        <li> Contact</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h2 class="links-header accent-txt">INFORMATION</h2>
+                                    <ul class="links-ul">
+                                        <li>Tearms & Condition</li>
+                                        <li> Privacy Policy</li>
+                                        <li>How to Buy</li>
+                                        <li>How to Sell</li>
+                                        <li>Promotion</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h2 class="links-header accent-txt">SHOP CATEGORY</h2>
+                                    <ul class="links-ul">
+                                        <li>Men</li>
+                                        <li> Women</li>
+                                        <li>Child</li>
+                                        <li> Apparel</li>
+                                        <li>Brows All</li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </article>
+                        <article class="footer-end">
+                            <div class="rights-social container">
+                                <p> © 2017 Brand All Rights Reserved.</p>
+                                <div class="social-links"> <span class="fab fa-facebook"></span> <span
+                                        class="fab fa-twitter"></span>
+                                    <span class="fab fa-linkedin"></span> <span class="fab fa-pinterest"></span>
+                                    <span class="fab fa-google-plus"></span>
+                                </div>
+                            </div>
+                        </article>
+                        </footer> -->
 </body>
 
 </html>
