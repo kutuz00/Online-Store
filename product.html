@@ -408,7 +408,7 @@
             </header>
             <article class="catalog container">
                 <nav>
-                    <details>
+                    <details open="true">
                         <summary class="producs-menu-category">
                             Category
                         </summary>
@@ -472,50 +472,248 @@
 
                     </details>
                 </nav>
-                <div class="products-wrap">
+                <div class="catalog-wrap">
 
                     <form class="filters" action="#">
-                        <fieldset>
-                            <legend>Trending now<legend></legend>
+                        <fieldset class="filter-btns">
+                            <legend class="filter-name">Trending now</legend>
 
-                                Bohemian | Floral | Lace
-                                Floral | Lace | Bohemian
+                            <div><button class="filter-btn">Bohemian </button> <span class="filter-btn-line">|</span>
+                                <button class="filter-btn"> Floral
+                                </button> <span class="filter-btn-line">|</span> <button class="filter-btn"> Lace
+                                </button>
+                            </div>
+                            <div><button class="filter-btn">Floral </button> <span class="filter-btn-line">|</span>
+                                <button class="filter-btn"> Lace
+                                </button> <span class="filter-btn-line">|</span> <button class="filter-btn">
+                                    Bohemian </button>
+                            </div>
                         </fieldset>
 
-                        <fieldset>
-                            <legend>Size<legend></legend>
+                        <fieldset class="filter-btns filter-chk-boxes">
+                            <legend class="filter-name">Size</legend>
 
-                                <input type="checkbox"> <label>XXS</label>
-                                <input type="checkbox"> <label>XS</label>
-                                <input type="checkbox"> <label>S</label>
-                                <input type="checkbox"> <label>M</label>
-                                <input type="checkbox"> <label>L</label>
-                                <input type="checkbox"> <label>XL</label>
-                                <input type="checkbox"> <label>XXL</label>
+
+
+                            <div class="filter-chk-box">
+
+
+                                <div class="chk-box-wrap"> <input class="chk-box" type="checkbox">
+                                    <label class="filter-chk-box-label">XXS</label>
+                                </div>
+                                <div class="chk-box-wrap"><input class="chk-box" type="checkbox">
+                                    <label class="filter-chk-box-label">XS</label>
+                                </div>
+                                <div class="chk-box-wrap"> <input class="chk-box" type="checkbox">
+                                    <label class="filter-chk-box-label">S</label>
+                                </div>
+                                <div class="chk-box-wrap"><input class="chk-box" type="checkbox">
+                                    <label class="filter-chk-box-label">M</label>
+                                </div>
+
+
+                            </div>
+                            <div class="filter-chk-box">
+
+                                <div class="chk-box-wrap"> <input class="chk-box" type="checkbox">
+                                    <label class="filter-chk-box-label">L</label>
+                                </div>
+                                <div class="chk-box-wrap"> <input class="chk-box" type="checkbox">
+                                    <label class="filter-chk-box-label">XL</label>
+                                </div>
+                                <div class="chk-box-wrap"> <input class="chk-box" type="checkbox">
+                                    <label class="filter-chk-box-label">XXL</label>
+                                </div>
+
+                            </div>
+
+
+
                         </fieldset>
 
 
 
-                        <fieldset>
-                            <legend>Price<legend></legend>
-                                <label for="price">$0</label>
-                                <input id="price" type="range" min="0" max="400" step="50">
+                        <fieldset class="filter-btns">
+                            <legend class="filter-name">Price</legend>
+
+                            <input class="filter-range" id="price" type="range" min="0" max="400" step="50">
+                            <div class="price-wrap"><label for="price">$0</label>
                                 <label for="price">$400</label>
+                            </div>
                         </fieldset>
                     </form>
                     <div class="sort">
-                        <form action="">
-                            <label>
+                        <form class="sort-form" action="#">
+                            <label class="sort-label">
                                 Sort By
                             </label>
                             <select>
-                                <option>12</option>
+                                <option>Name</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </select>
+                        </form>
+                        <form class="sort-form" action="#">
+                            <label class="sort-label">
+                                Show
+                            </label>
+                            <select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
                             </select>
                         </form>
                     </div>
-                    <div>Product Content 12</div>
-                    <div>
-                        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                    <div class="products-wrap">
+                        <div class="product-item">
+                            <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
+                                <div class="item-desc">
+                                    <p class="item-name">Mango People T-shirt</p>
+                                    <p class="item-price">$52.00</p>
+                                </div>
+                            </a>
+                            <div class="add-to-cart">
+                                <a class="add" href="http://google.com"><img src="img/add-to_cart.svg"
+                                        alt="add to cart">
+                                    <p class="add-txt"> Add to cart</p>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="product-item">
+                            <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
+                                <div class="item-desc">
+                                    <p class="item-name">Mango People T-shirt</p>
+                                    <p class="item-price">$52.00</p>
+                                </div>
+                            </a>
+                            <div class="add-to-cart">
+                                <a class="add" href="http://google.com"><img src="img/add-to_cart.svg"
+                                        alt="add to cart">
+                                    <p class="add-txt"> Add to cart</p>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="product-item">
+                            <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
+                                <div class="item-desc">
+                                    <p class="item-name">Mango People T-shirt</p>
+                                    <p class="item-price">$52.00</p>
+                                </div>
+                            </a>
+                            <div class="add-to-cart">
+                                <a class="add" href="http://google.com"><img src="img/add-to_cart.svg"
+                                        alt="add to cart">
+                                    <p class="add-txt"> Add to cart</p>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="product-item">
+                            <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
+                                <div class="item-desc">
+                                    <p class="item-name">Mango People T-shirt</p>
+                                    <p class="item-price">$52.00</p>
+                                </div>
+                            </a>
+                            <div class="add-to-cart">
+                                <a class="add" href="http://google.com"><img src="img/add-to_cart.svg"
+                                        alt="add to cart">
+                                    <p class="add-txt"> Add to cart</p>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="product-item">
+                            <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
+                                <div class="item-desc">
+                                    <p class="item-name">Mango People T-shirt</p>
+                                    <p class="item-price">$52.00</p>
+                                </div>
+                            </a>
+                            <div class="add-to-cart">
+                                <a class="add" href="http://google.com"><img src="img/add-to_cart.svg"
+                                        alt="add to cart">
+                                    <p class="add-txt"> Add to cart</p>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="product-item">
+                            <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
+                                <div class="item-desc">
+                                    <p class="item-name">Mango People T-shirt</p>
+                                    <p class="item-price">$52.00</p>
+                                </div>
+                            </a>
+                            <div class="add-to-cart">
+                                <a class="add" href="http://google.com"><img src="img/add-to_cart.svg"
+                                        alt="add to cart">
+                                    <p class="add-txt"> Add to cart</p>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="product-item">
+                            <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
+                                <div class="item-desc">
+                                    <p class="item-name">Mango People T-shirt</p>
+                                    <p class="item-price">$52.00</p>
+                                </div>
+                            </a>
+                            <div class="add-to-cart">
+                                <a class="add" href="http://google.com"><img src="img/add-to_cart.svg"
+                                        alt="add to cart">
+                                    <p class="add-txt"> Add to cart</p>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="product-item">
+                            <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
+                                <div class="item-desc">
+                                    <p class="item-name">Mango People T-shirt</p>
+                                    <p class="item-price">$52.00</p>
+                                </div>
+                            </a>
+                            <div class="add-to-cart">
+                                <a class="add" href="http://google.com"><img src="img/add-to_cart.svg"
+                                        alt="add to cart">
+                                    <p class="add-txt"> Add to cart</p>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="product-item">
+                            <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
+                                <div class="item-desc">
+                                    <p class="item-name">Mango People T-shirt</p>
+                                    <p class="item-price">$52.00</p>
+                                </div>
+                            </a>
+                            <div class="add-to-cart">
+                                <a class="add" href="http://google.com"><img src="img/add-to_cart.svg"
+                                        alt="add to cart">
+                                    <p class="add-txt"> Add to cart</p>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <span class="page-num fas fa-chevron-left"></span>
+                        <span class="page-num">1</span><span class="page-num">2</span><span
+                            class="page-num">3</span><span class="page-num">4</span><span class="page-num">5</span><span
+                            class="page-num">6</span><span class="page-num">7</span><span class="page-num">8</span><span
+                            class="page-num">9</span><span class="page-num">10</span> <span
+                            class="page-num fas fa-chevron-right"></span>
 
 
                     </div>
