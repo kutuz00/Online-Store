@@ -52,8 +52,8 @@
                                             <li>Jackets/vests </li>
                                         </ul>
                                     </div>
-                                </details> <input class="input" placeholder="Search for Item..."> <button class="submit"
-                                    type="submit"><span class="fa fa-search"></span></button>
+                                </details> <input class="input" type="text" placeholder="Search for Item..."> <button
+                                    class="submit" type="submit"><span class="fa fa-search"></span></button>
                             </form>
                         </div>
                     </div>
@@ -398,14 +398,15 @@
     </header>
     <section>
         <article class="content">
-            <header class="sp-banner">
+            <div class="sp-banner">
                 <div class="sp-banner-top container">
-                    <h2 class="accent-txt sp-banner-left">New Arrivals </h2>
-                    <span class="sp-banner-right">Home /</span><span class="sp-banner-right">Men / </span> <b><span
-                            class="accent-txt sp-banner-right">New Arrivals</span> </b>
+                    <h2 class="accent-txt sp-banner-accent sp-banner-left">New Arrivals </h2>
+                    <div> <span class="sp-banner-right">Home /</span><span class="sp-banner-right">Men / </span>
+                        <span class="accent-txt sp-banner-accent sp-banner-right">New Arrivals</span>
+                    </div>
                 </div>
 
-            </header>
+            </div>
             <article class="catalog container">
                 <nav>
                     <details open="true">
@@ -474,7 +475,7 @@
                 </nav>
                 <div class="catalog-wrap">
 
-                    <form class="filters" action="#">
+                    <form oninput="result.value=(range.value)" class="filters" action="#">
                         <fieldset class="filter-btns">
                             <legend class="filter-name">Trending now</legend>
 
@@ -498,31 +499,31 @@
                             <div class="filter-chk-box">
 
 
-                                <div class="chk-box-wrap"> <input class="chk-box" type="checkbox">
-                                    <label class="filter-chk-box-label">XXS</label>
+                                <div class="chk-box-wrap"> <input class="chk-box" id="xxs" type="checkbox">
+                                    <label for="xxs" class="filter-chk-box-label">XXS</label>
                                 </div>
-                                <div class="chk-box-wrap"><input class="chk-box" type="checkbox">
-                                    <label class="filter-chk-box-label">XS</label>
+                                <div class="chk-box-wrap"><input class="chk-box" id="xs" type="checkbox">
+                                    <label for="xs" class="filter-chk-box-label">XS</label>
                                 </div>
-                                <div class="chk-box-wrap"> <input class="chk-box" type="checkbox">
-                                    <label class="filter-chk-box-label">S</label>
+                                <div class="chk-box-wrap"> <input class="chk-box" id="s" type="checkbox">
+                                    <label for="s" class="filter-chk-box-label">S</label>
                                 </div>
-                                <div class="chk-box-wrap"><input class="chk-box" type="checkbox">
-                                    <label class="filter-chk-box-label">M</label>
+                                <div class="chk-box-wrap"><input class="chk-box" id="m" type="checkbox">
+                                    <label for="m" class="filter-chk-box-label">M</label>
                                 </div>
 
 
                             </div>
                             <div class="filter-chk-box">
 
-                                <div class="chk-box-wrap"> <input class="chk-box" type="checkbox">
-                                    <label class="filter-chk-box-label">L</label>
+                                <div class="chk-box-wrap"> <input class="chk-box" id="l" type="checkbox">
+                                    <label for="l" class="filter-chk-box-label">L</label>
                                 </div>
-                                <div class="chk-box-wrap"> <input class="chk-box" type="checkbox">
-                                    <label class="filter-chk-box-label">XL</label>
+                                <div class="chk-box-wrap"> <input class="chk-box" id="xl" type="checkbox">
+                                    <label for="xl" class="filter-chk-box-label">XL</label>
                                 </div>
-                                <div class="chk-box-wrap"> <input class="chk-box" type="checkbox">
-                                    <label class="filter-chk-box-label">XXL</label>
+                                <div class="chk-box-wrap"> <input class="chk-box" id="xxl" type="checkbox">
+                                    <label for="xxl" class="filter-chk-box-label">XXL</label>
                                 </div>
 
                             </div>
@@ -530,46 +531,55 @@
 
 
                         </fieldset>
-
-
-
                         <fieldset class="filter-btns">
                             <legend class="filter-name">Price</legend>
 
-                            <input class="filter-range" id="price" type="range" min="0" max="400" step="50">
+                            <input id="range" type="range" class="filter-range" min="0" max="400" step="1" value="33">
                             <div class="price-wrap"><label for="price">$0</label>
+                                <output name="result" for="range"></output>
                                 <label for="price">$400</label>
+
                             </div>
                         </fieldset>
                     </form>
                     <div class="sort">
-                        <form class="sort-form" action="#">
-                            <label class="sort-label">
+                        <div class="sort-by-name">
+
+                            <span class="sort-form sort-label">
                                 Sort By
-                            </label>
-                            <select>
-                                <option>Name</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                            </select>
-                        </form>
-                        <form class="sort-form" action="#">
-                            <label class="sort-label">
+                            </span>
+                            <form class="sort-form" action="#">
+
+                                <select class="select">
+                                    <option>Name</option>
+                                    <option>1</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="sort-by-number">
+                            <span class="sort-form sort-label">
                                 Show
-                            </label>
-                            <select>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                            </select>
-                        </form>
+                            </span>
+                            <form class="sort-form" action="#">
+                                <div class="select-wrap">
+                                    <select class="select">
+                                        <option>Qty</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </div>
+
+                            </form>
+                        </div>
                     </div>
+
                     <div class="products-wrap">
                         <div class="product-item">
                             <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
@@ -582,9 +592,15 @@
                                 <a class="add" href="http://google.com"><img src="img/add-to_cart.svg"
                                         alt="add to cart">
                                     <p class="add-txt"> Add to cart</p>
-                                </a>
-                            </div>
 
+                                </a>
+
+
+                            </div>
+                            <div class="add-ons">
+                                <a href="1" class="add"><img src="img/reset.svg" alt="reset"></a>
+                                <a href="2" class="add"><img src="img/like.svg" alt="like"></a>
+                            </div>
                         </div>
                         <div class="product-item">
                             <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
@@ -599,7 +615,10 @@
                                     <p class="add-txt"> Add to cart</p>
                                 </a>
                             </div>
-
+                            <div class="add-ons">
+                                <a href="1" class="add"><img src="img/reset.svg" alt="reset"></a>
+                                <a href="2" class="add"><img src="img/like.svg" alt="like"></a>
+                            </div>
                         </div>
                         <div class="product-item">
                             <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
@@ -614,7 +633,10 @@
                                     <p class="add-txt"> Add to cart</p>
                                 </a>
                             </div>
-
+                            <div class="add-ons">
+                                <a href="1" class="add"><img src="img/reset.svg" alt="reset"></a>
+                                <a href="2" class="add"><img src="img/like.svg" alt="like"></a>
+                            </div>
                         </div>
                         <div class="product-item">
                             <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
@@ -629,7 +651,10 @@
                                     <p class="add-txt"> Add to cart</p>
                                 </a>
                             </div>
-
+                            <div class="add-ons">
+                                <a href="1" class="add"><img src="img/reset.svg" alt="reset"></a>
+                                <a href="2" class="add"><img src="img/like.svg" alt="like"></a>
+                            </div>
                         </div>
                         <div class="product-item">
                             <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
@@ -644,7 +669,10 @@
                                     <p class="add-txt"> Add to cart</p>
                                 </a>
                             </div>
-
+                            <div class="add-ons">
+                                <a href="1" class="add"><img src="img/reset.svg" alt="reset"></a>
+                                <a href="2" class="add"><img src="img/like.svg" alt="like"></a>
+                            </div>
                         </div>
                         <div class="product-item">
                             <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
@@ -659,7 +687,10 @@
                                     <p class="add-txt"> Add to cart</p>
                                 </a>
                             </div>
-
+                            <div class="add-ons">
+                                <a href="1" class="add"><img src="img/reset.svg" alt="reset"></a>
+                                <a href="2" class="add"><img src="img/like.svg" alt="like"></a>
+                            </div>
                         </div>
                         <div class="product-item">
                             <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
@@ -674,7 +705,10 @@
                                     <p class="add-txt"> Add to cart</p>
                                 </a>
                             </div>
-
+                            <div class="add-ons">
+                                <a href="1" class="add"><img src="img/reset.svg" alt="reset"></a>
+                                <a href="2" class="add"><img src="img/like.svg" alt="like"></a>
+                            </div>
                         </div>
                         <div class="product-item">
                             <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
@@ -689,7 +723,10 @@
                                     <p class="add-txt"> Add to cart</p>
                                 </a>
                             </div>
-
+                            <div class="add-ons">
+                                <a href="1" class="add"><img src="img/reset.svg" alt="reset"></a>
+                                <a href="2" class="add"><img src="img/like.svg" alt="like"></a>
+                            </div>
                         </div>
                         <div class="product-item">
                             <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
@@ -704,10 +741,13 @@
                                     <p class="add-txt"> Add to cart</p>
                                 </a>
                             </div>
-
+                            <div class="add-ons">
+                                <a href="1" class="add"><img src="img/reset.svg" alt="reset"></a>
+                                <a href="2" class="add"><img src="img/like.svg" alt="like"></a>
+                            </div>
                         </div>
                     </div>
-                    <footer>
+                    <footer class="products-bottom">
                         <div class="pagination">
                             <span class="page-num fas fa-chevron-left"></span>
                             <span class="page-num">1</span><span class="page-num">2</span><span
@@ -719,7 +759,7 @@
 
 
                         </div>
-                        <span>View All</span>
+                        <a class="bottom-button-link" href="#">View All</a>
                     </footer>
 
 
@@ -770,96 +810,95 @@
 
 
 
-    <!-- <footer class=" footer">
-                        <article class="footer-top">
-                            <div class="footer-top-content container">
-                                <aside class="footer-message"> <img src="img/contact-image-shape.png" alt="photo">
-                                    <div class="message-wrap">
-                                        <blockquote>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a
-                                            pulvinar purus
-                                            condimentum a. Aliquam condimentum mattis neque sed pretium”
-                                        </blockquote>
-                                        <footer>
-                                            <h4 class="accent-txt">Burhan</h4>
-                                            <p>Dhaka, Bd </p>
-                                        </footer>
+    <footer class=" footer">
+        <article class="footer-top">
+            <div class="footer-top-content container">
+                <aside class="footer-message"> <img src="img/contact-image-shape.png" alt="photo">
+                    <div class="message-wrap">
+                        <blockquote>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a
+                            pulvinar purus
+                            condimentum a. Aliquam condimentum mattis neque sed pretium”
+                        </blockquote>
+                        <footer>
+                            <h4 class="accent-txt">Burhan</h4>
+                            <p>Dhaka, Bd </p>
+                        </footer>
 
 
-                                        <div class="dots">
-                                            <div class="dot"></div>
-                                            <div class="dot"></div>
-                                            <div class="dot"></div>
-                                        </div>
-                                    </div>
-                                </aside>
-                                <div class="footer-line"> </div>
-                                <div class="footer-subscribe">
-                                    <h1 class="subscribe-h1">Subscribe</h1>
-                                    <p class="subscribe-p">FOR OUR NEWLETTER AND PROMOTION</p>
-                                    <form class="subscribe" action="#"> <input class="subscribe-form-input"
-                                            placeholder="Enter Your Email"><button class="subscribe-form-button"
-                                            type="submit">Subscribe</button> </form>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="footer-bottom container">
-                            <div class="our-testamony">
-                                <div class="logo "> <a class="logo-link" href="index.html">
-                                        <h1 class="logo-txt"> Bran<span class="accent-txt accent-font">d</span></h1>
-                                    </a></div>
-                                <p class="space-footer-p">Objectively transition extensive data rather than cross
-                                    functional solutions.
-                                    Monotonectally syndicate multidisciplinary materials before go forward benefits.
-                                    Intrinsicly
-                                    syndicate an expanded array of processes and cross-unit partnerships.</p>
-                                <p>Efficiently plagiarize 24/365 action items and focused infomediaries.
-                                    Distinctively seize superior
-                                    initiatives for wireless technologies. Dynamically optimize. </p>
-                            </div>
-                            <nav class="links">
-                                <div>
-                                    <h2 class="links-header accent-txt">COMPANY</h2>
-                                    <ul class="links-ul">
-                                        <li> Home</li>
-                                        <li>Shop</li>
-                                        <li>About</li>
-                                        <li>How It Works</li>
-                                        <li> Contact</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h2 class="links-header accent-txt">INFORMATION</h2>
-                                    <ul class="links-ul">
-                                        <li>Tearms & Condition</li>
-                                        <li> Privacy Policy</li>
-                                        <li>How to Buy</li>
-                                        <li>How to Sell</li>
-                                        <li>Promotion</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h2 class="links-header accent-txt">SHOP CATEGORY</h2>
-                                    <ul class="links-ul">
-                                        <li>Men</li>
-                                        <li> Women</li>
-                                        <li>Child</li>
-                                        <li> Apparel</li>
-                                        <li>Brows All</li>
-                                    </ul>
-                                </div>
-                            </nav>
-                        </article>
-                        <article class="footer-end">
-                            <div class="rights-social container">
-                                <p> © 2017 Brand All Rights Reserved.</p>
-                                <div class="social-links"> <span class="fab fa-facebook"></span> <span
-                                        class="fab fa-twitter"></span>
-                                    <span class="fab fa-linkedin"></span> <span class="fab fa-pinterest"></span>
-                                    <span class="fab fa-google-plus"></span>
-                                </div>
-                            </div>
-                        </article>
-                        </footer> -->
+                        <div class="dots">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </aside>
+                <div class="footer-line"> </div>
+                <div class="footer-subscribe">
+                    <h1 class="subscribe-h1">Subscribe</h1>
+                    <p class="subscribe-p">FOR OUR NEWLETTER AND PROMOTION</p>
+                    <form class="subscribe" action="#"> <input class="subscribe-form-input"
+                            placeholder="Enter Your Email" required pattern="\S+@[a-z].+[a-z]+"><button
+                            class="subscribe-form-button" type="submit">Subscribe</button> </form>
+                </div>
+            </div>
+        </article>
+        <article class="footer-bottom container">
+            <div class="our-testamony">
+                <div class="logo "> <a class="logo-link" href="index.html">
+                        <h1 class="logo-txt"> Bran<span class="accent-txt accent-font">d</span></h1>
+                    </a></div>
+                <p class="space-footer-p">Objectively transition extensive data rather than cross
+                    functional solutions.
+                    Monotonectally syndicate multidisciplinary materials before go forward benefits.
+                    Intrinsicly
+                    syndicate an expanded array of processes and cross-unit partnerships.</p>
+                <p>Efficiently plagiarize 24/365 action items and focused infomediaries.
+                    Distinctively seize superior
+                    initiatives for wireless technologies. Dynamically optimize. </p>
+            </div>
+            <nav class="links">
+                <div>
+                    <h2 class="links-header accent-txt">COMPANY</h2>
+                    <ul class="links-ul">
+                        <li> Home</li>
+                        <li>Shop</li>
+                        <li>About</li>
+                        <li>How It Works</li>
+                        <li> Contact</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="links-header accent-txt">INFORMATION</h2>
+                    <ul class="links-ul">
+                        <li>Tearms & Condition</li>
+                        <li> Privacy Policy</li>
+                        <li>How to Buy</li>
+                        <li>How to Sell</li>
+                        <li>Promotion</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="links-header accent-txt">SHOP CATEGORY</h2>
+                    <ul class="links-ul">
+                        <li>Men</li>
+                        <li> Women</li>
+                        <li>Child</li>
+                        <li> Apparel</li>
+                        <li>Brows All</li>
+                    </ul>
+                </div>
+            </nav>
+        </article>
+        <article class="footer-end">
+            <div class="rights-social container">
+                <p> © 2017 Brand All Rights Reserved.</p>
+                <div class="social-links"> <span class="fab fa-facebook"></span> <span class="fab fa-twitter"></span>
+                    <span class="fab fa-linkedin"></span> <span class="fab fa-pinterest"></span>
+                    <span class="fab fa-google-plus"></span>
+                </div>
+            </div>
+        </article>
+    </footer>
 </body>
 
 </html>
