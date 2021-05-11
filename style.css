@@ -830,11 +830,18 @@ details[open] > .producs-menu-category::after{
 .item-card .accent-txt{
     color: #f16d7f;
 }
+.item-credits{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 142px;
+}
+
 .item-card h1{
     color: #ef5b70;
     font-size: 24px;
     font-weight: 700;
     line-height: 24px;
+    padding: 37px 0;
 
 }
 .item-card h3{
@@ -847,6 +854,7 @@ details[open] > .producs-menu-category::after{
     line-height: 24px;
     text-align: center;
     text-transform: uppercase;
+    
 }
 .item-card h2{
     color: #4d4d4d;
@@ -876,15 +884,72 @@ details[open] > .producs-menu-category::after{
     border: .5px solid #eaeaea;
     background-color: #ef5b70;
 }
-.selection{
+.order-menu{
+    padding: 63px 31px 0 31px;
+}
+.order-menu-type{
+    width: 144px;
+}
+.selection-form-wrap{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    appearance: none;
+}
+
+.selection{
     display: flex;
     justify-content: space-between;
     text-align: left;
+    appearance: none;
+    padding-bottom: 28px;
+}
+.apperance{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    padding-bottom: 12px;
+}
+.selection-input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #eaeaea;
+    height: 35px;
+
+}
+.selection-button{
+    border: 1px solid #ef5b70;
+    background-color: #ffffff;
+    color: #ef5b70;
+    font-size: 16px;
+    font-weight: 400;
+    align-self: center;
+    width: 100%;
+}
+.selection-button::before{
+    content: "\f07a";
+    padding: 16px;
+    font-size: 24px;
+}
+.selection-button:hover{
+    background-color: #ef5b70;
+    color: #FFFFFF;
+}
+.form-control-sm,
+.form-select-sm{
+    align-self: center;
+}
+.order-color-option {
+    background-color: #1fd71f;
+    width: 20px;
+    height: 20px;
 }
 
 .may-like{
-    padding-top: 444px;
+    padding-top: 720px;
     width: 100%;
     text-align: center;
     text-transform: uppercase;
