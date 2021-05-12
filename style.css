@@ -958,14 +958,7 @@ details[open] > .producs-menu-category::after{
     line-height: 20px;
     font-weight: 400;
 }
-/* .cover-btn{
-    content: "\f053";
-    background-color: #2a2a2a;
-    background-blend-mode: color;
-    color: #FFFFFF;
-    padding: 16px 21px 16px 18px;
-    opacity: .4;
-} */
+
 .img-slide-container{
     display: flex;
     border: 1px solid #eaeaea;
