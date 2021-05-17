@@ -1267,7 +1267,128 @@ details[open] > .producs-menu-category::after
 .offer-deteil p
     padding: 0 0 51px 75px
     box-sizing: border-box
+.shoping-cart-wrap
+    display: flex
+    flex-flow: column wrap
+    padding-top: 90px
+    width: 100%
+    .form-top
+        display: flex
+        border-bottom: 1px solid #eaeaea
+        font-weight: 900
+        justify-content: space-between
 
+    .form-headers
+        color: #222222
+        font-size: 13px
+        text-transform: uppercase
+        font-weight: 700
+        line-height: 20px
+        letter-spacing: -0.2px
+        width: 43%
+        &-float
+            width: max-content
+            text-align: right
+            width: 20%
+    .shoping-cart-right
+        display: flex
+        justify-content: space-between
+        width: 57%
+    .shoping-cart-item
+        border-bottom: 1px solid #eaeaea
+        padding: 23px 0
+        display: flex
+        align-items: center
+        text-align: left
+        width: 100%
+        &-desc
+            display: flex
+            width: 43%
+            &-txt
+                margin-left: 22px
+                h6
+                    color: #222222
+                    font-size: 13px
+                    text-transform: uppercase
+                    font-weight: 400
+                    line-height: 20px
+                    letter-spacing: -0.2px
+                    margin-bottom: 30px
+                p
+                    color: #6f6e6e
+                    font-family: Lato
+                    font-size: 13px
+                    font-weight: 300
+                    line-height: 20px
+                    text-align: left
+                    margin-bottom: 0
+                span
+                    color: #575757
+                    font-weight: 400
+        &-wrap
+            display: flex
+            width: 57%
+            justify-content: space-between
+
+        &-detail
+            width: 15%
+            height: min-content
+            text-align: right
+            &-input
+                width: 54px
+                align-self: center
+.shoping-cart-buttons
+    display: flex
+    justify-content: space-between
+    margin-top: 44px
+    margin-bottom: 63px
+    &-reset,
+    &-continue,
+    &-quote,
+    &-coupon,
+    &-chk-out,
+        color: #4a4a4a
+        font-size: 14px
+        font-weight: 700
+        text-transform: uppercase
+        border: 1px solid #eaeaea
+        background-color: #ffffff
+        padding: 19px 39px
+        &:hover
+            background-color: #f16d7f
+            color: #fff
+.shopping-cart-bottom
+    display: flex
+    justify-content: space-between
+    padding-bottom: 79px
+    &-shiping
+        display: flex
+        flex-direction: column
+        width: 100% /3
+        input
+            margin-bottom: 20px
+    &-coupon
+        display: flex
+        flex-direction: column
+        width: 100% /3
+        input
+            margin-bottom: 25px
+    &-chk-out
+        width: 100% /3
+        display: flex
+        flex-direction: column
+        background-color: #f5f3f3
+        padding: 42px
+        text-align: right
+        width: max-content
+        &-h6
+            text-align: right
+            align-self: flex-end
+        &-hr
+            height: 1px
+            background-color: #e2e2e2
+            margin-top: 22px
+            margin-bottom: 17px
 .footer-top
     height: 438px
     background: rgba(242, 242, 242, 0.4) url(img/footer-bg.png)
