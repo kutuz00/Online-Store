@@ -1287,34 +1287,37 @@ details[open] > .producs-menu-category::after
         letter-spacing: -0.2px
         width: 43%
         &-float
-            width: max-content
-            text-align: right
+            width: fit-content
             width: 20%
+            text-align: right
+
     .shoping-cart-right
         display: flex
-        justify-content: space-between
+        align-content: space-between
         width: 57%
+    .shoping-cart-items
+        display: flex
+        flex-wrap: wrap
     .shoping-cart-item
         border-bottom: 1px solid #eaeaea
         padding: 23px 0
         display: flex
-        align-items: center
-        text-align: left
+        text-align: center
         width: 100%
         &-desc
             display: flex
             width: 43%
+            text-align: left
             &-txt
                 margin-left: 22px
-                h6
+                &-h6
                     color: #222222
                     font-size: 13px
                     text-transform: uppercase
                     font-weight: 400
                     line-height: 20px
                     letter-spacing: -0.2px
-                    margin-bottom: 30px
-                p
+                &-p
                     color: #6f6e6e
                     font-family: Lato
                     font-size: 13px
@@ -1322,65 +1325,114 @@ details[open] > .producs-menu-category::after
                     line-height: 20px
                     text-align: left
                     margin-bottom: 0
-                span
+                &-accent
                     color: #575757
                     font-weight: 400
+                &-rate
+                    color: #e4af48
+                    font-weight: 400
+                    font-size: 13px
+                    padding-bottom: 15px
         &-wrap
             display: flex
             width: 57%
             justify-content: space-between
 
         &-detail
-            width: 15%
+            width: 20%
             height: min-content
-            text-align: right
+            align-self: center
+            text-align: center
+            padding-left: 10%
+            text-transform: uppercase
             &-input
                 width: 54px
-                align-self: center
+                align-self: right
+                border: 1px solid #eaeaea
+                &:focus
+                    outline: 1px solid #eaeaea
+
 .shoping-cart-buttons
     display: flex
     justify-content: space-between
     margin-top: 44px
     margin-bottom: 63px
+    &-button,
     &-reset,
     &-continue,
-    &-quote,
-    &-coupon,
-    &-chk-out,
         color: #4a4a4a
         font-size: 14px
         font-weight: 700
         text-transform: uppercase
         border: 1px solid #eaeaea
         background-color: #ffffff
-        padding: 19px 39px
+        padding: 13.5px 39px
         &:hover
             background-color: #f16d7f
             color: #fff
+        &-quote
+            font-size: 11px
+            padding: 11px 14px
+            width: max-content
+        &-coupon
+            padding: 11px 18px
+            font-size: 11px
+        &_chk-out
+            font-size: 16px
+            padding: 16px 42px
+            color: #ffffff
+            background-color: #f16d7f
+            width: 100%
+            &:hover
+                background-color: #ffffff
+                color: #f16d7f
+
 .shopping-cart-bottom
     display: flex
     justify-content: space-between
     padding-bottom: 79px
+    .form-headers
+        width: 100%
     &-shiping
+        width: 31%
         display: flex
         flex-direction: column
-        width: 100% /3
         input
+            height: 45px
+            padding-left: 17px
             margin-bottom: 20px
+            border: 1px solid #eaeaea
+            width: 100%
+            color: #b1b1b1
+            font-size: 13px
+            font-weight: 300
+            &:focus
+                outline: 1px solid #eaeaea
+
     &-coupon
+        width: 31%
         display: flex
         flex-direction: column
-        width: 100% /3
-        input
+        input[type=text]
+            height: 45px
+            padding-left: 17px
             margin-bottom: 25px
+            border: 1px solid #eaeaea
+            width: 100%
+            color: #b1b1b1
+            font-size: 13px
+            font-weight: 300
+            width: 100%
+
+            &:focus
+                outline: 1px solid #eaeaea
     &-chk-out
-        width: 100% /3
+        width: max-content
         display: flex
         flex-direction: column
         background-color: #f5f3f3
         padding: 42px
         text-align: right
-        width: max-content
         &-h6
             text-align: right
             align-self: flex-end
