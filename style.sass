@@ -1441,6 +1441,38 @@ details[open] > .producs-menu-category::after
             background-color: #e2e2e2
             margin-top: 22px
             margin-bottom: 17px
+.accordion
+    padding: 89px 0 93px
+    overflow: hidden
+    .tab
+        width: 100%
+
+        overflow: hidden
+        &-input
+            position: absolute
+            opacity: 0
+            z-index: -2
+            &:checked
+                ~.tab-content
+                    max-height: 100vh
+        &-label
+            display: flex
+            cursor: pointer
+            color: #222222
+            font-size: 16px
+            font-weight: 700
+            text-align: left
+            text-transform: uppercase
+            padding: 33px 0
+            &:hover
+                background: darken(#e8e8e8, 10% )
+
+        &-content
+            border-bottom: 1px solid #e8e8e8
+            padding-left: 35px
+            max-height: 0
+            transition: all .35s
+
 .footer-top
     height: 438px
     background: rgba(242, 242, 242, 0.4) url(img/footer-bg.png)
