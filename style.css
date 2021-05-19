@@ -20,6 +20,10 @@ ul, li, ol, details {
   padding: 0 0 0 0;
 }
 
+input {
+  outline: none;
+}
+
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -1952,7 +1956,7 @@ details[open] > .producs-menu-category::after {
   margin-bottom: 63px;
 }
 
-.shoping-cart-buttons-button, .shoping-cart-buttons-reset, .shoping-cart-buttons-continue {
+.shoping-cart-buttons-button, .shoping-cart-buttons-reset, .shoping-cart-buttons-login {
   color: #4a4a4a;
   font-size: 14px;
   font-weight: 700;
@@ -1962,12 +1966,12 @@ details[open] > .producs-menu-category::after {
   padding: 13.5px 39px;
 }
 
-.shoping-cart-buttons-button:hover, .shoping-cart-buttons-reset:hover, .shoping-cart-buttons-continue:hover {
+.shoping-cart-buttons-button:hover, .shoping-cart-buttons-reset:hover, .shoping-cart-buttons-login:hover {
   background-color: #f16d7f;
   color: #fff;
 }
 
-.shoping-cart-buttons-button-quote, .shoping-cart-buttons-reset-quote, .shoping-cart-buttons-continue-quote {
+.shoping-cart-buttons-button-quote, .shoping-cart-buttons-reset-quote, .shoping-cart-buttons-login-quote {
   font-size: 11px;
   padding: 11px 14px;
   width: -webkit-max-content;
@@ -1975,12 +1979,12 @@ details[open] > .producs-menu-category::after {
   width: max-content;
 }
 
-.shoping-cart-buttons-button-coupon, .shoping-cart-buttons-reset-coupon, .shoping-cart-buttons-continue-coupon {
+.shoping-cart-buttons-button-coupon, .shoping-cart-buttons-reset-coupon, .shoping-cart-buttons-login-coupon {
   padding: 11px 18px;
   font-size: 11px;
 }
 
-.shoping-cart-buttons-button_chk-out, .shoping-cart-buttons-reset_chk-out, .shoping-cart-buttons-continue_chk-out {
+.shoping-cart-buttons-button_chk-out, .shoping-cart-buttons-reset_chk-out, .shoping-cart-buttons-login_chk-out {
   font-size: 16px;
   padding: 16px 42px;
   color: #ffffff;
@@ -1988,9 +1992,18 @@ details[open] > .producs-menu-category::after {
   width: 100%;
 }
 
-.shoping-cart-buttons-button_chk-out:hover, .shoping-cart-buttons-reset_chk-out:hover, .shoping-cart-buttons-continue_chk-out:hover {
+.shoping-cart-buttons-button_chk-out:hover, .shoping-cart-buttons-reset_chk-out:hover, .shoping-cart-buttons-login_chk-out:hover {
   background-color: #ffffff;
   color: #f16d7f;
+}
+
+.shoping-cart-buttons-button_continue, .shoping-cart-buttons-reset_continue, .shoping-cart-buttons-login_continue {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-top: 38px;
+  margin-bottom: 79px;
+  padding: 16px 53px;
 }
 
 .shopping-cart-bottom {
@@ -2123,7 +2136,8 @@ details[open] > .producs-menu-category::after {
 }
 
 .accordion .tab-label:hover {
-  background: #cfcfcf;
+  background: #f16d7f;
+  color: #ffffff;
 }
 
 .accordion .tab-content {
@@ -2132,6 +2146,76 @@ details[open] > .producs-menu-category::after {
   max-height: 0;
   -webkit-transition: all .35s;
   transition: all .35s;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.accordion .tab-content-guest, .accordion .tab-content-guest-register {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 8px 0;
+}
+
+.accordion .tab-content-guest input, .accordion .tab-content-guest-register input {
+  margin-right: 14px;
+}
+
+.accordion .tab-content-guest-chk-out {
+  width: 49%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.accordion .tab-content-guest-chk-out-easy {
+  color: #b3b2b2;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  margin: 0;
+  padding-top: 16px;
+}
+
+.accordion .tab-content-guest-chk-out-easy::before {
+  content: "\f101";
+}
+
+.accordion .tab-content-header {
+  color: #222222;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.accordion .tab-content-header_h4, .accordion .tab-content-header_label {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.accordion .tab-content-header-spacer {
+  padding-top: 22px;
+}
+
+.accordion .tab-content-member {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .footer-top {

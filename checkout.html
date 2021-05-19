@@ -433,9 +433,44 @@
                     <input class="tab-input" type="radio" name="accordion" id="shiping-address" checked>
                     <label class="tab-label" for="shiping-address">01. Shipping Adress</label>
                     <div class="tab-content">
+                        <form class="tab-content-guest-chk-out" id="guest-chk-out" action="#">
+                            <h3 class="tab-content-header">Check as a guest or register</h3>
+                            <p>Register with us for future convenience</p>
+                            <div class="tab-content-guest">
+                                <input type="radio" name="guest-chk-out" id="guest"><label
+                                    class="tab-content-header tab-content-header_label" for="guest">checkout as
+                                    guest</label>
+                            </div>
+                            <div class="tab-content-guest-register">
 
+                                <input type="radio" name="guest-chk-out" id="register" checked><label
+                                    class=" tab-content-header tab-content-header_label" for="register">register</label>
 
-                        <h1>Content</h1>
+                            </div>
+
+                            <h3 class="tab-content-header tab-content-header-spacer">register and save time!</h3>
+                            <p>Register with us for future convenience</p>
+                            <p class="tab-content-guest-chk-out-easy"> Fast and easy checkout</p>
+                            <p class="tab-content-guest-chk-out-easy"> Easy access to your order history and status
+                            </p>
+                            <button class="shoping-cart-buttons-button shoping-cart-buttons-button_continue"
+                                for="guest-chk-out">Continue</button>
+
+                        </form>
+
+                        <form class="tab-content-member" id="member" action="#">
+                            <h3 class="tab-content-header">Already registed?</h3>
+                            <p>Please log in below</p>
+                            <h4 class="tab-content-header_h4">EMAIL ADDRESS *</h4>
+                            <input type="text" for="member" required>
+                            <h4 class="tab-content-header_h4">PASSWORD *</h4>
+                            <input type="text" for="member" required>
+                            <p>* Required Fileds</p>
+                            <button class="shoping-cart-buttons-login" for="member">Log in</button>
+                            <p>Forgot Password ?</p>
+
+                        </form>
+
 
 
 

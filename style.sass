@@ -15,7 +15,8 @@ a
 ul, li, ol, details
     margin: 0 0 0 0
     padding: 0 0 0 0
-
+input
+    outline: none
 .container
     max-width: 1140px
     margin: 0 auto
@@ -1359,7 +1360,7 @@ details[open] > .producs-menu-category::after
     margin-bottom: 63px
     &-button,
     &-reset,
-    &-continue,
+    &-login,
         color: #4a4a4a
         font-size: 14px
         font-weight: 700
@@ -1386,6 +1387,11 @@ details[open] > .producs-menu-category::after
             &:hover
                 background-color: #ffffff
                 color: #f16d7f
+        &_continue
+            width: max-content
+            margin-top: 38px
+            margin-bottom: 79px
+            padding: 16px 53px
 
 .shopping-cart-bottom
     display: flex
@@ -1465,13 +1471,53 @@ details[open] > .producs-menu-category::after
             text-transform: uppercase
             padding: 33px 0
             &:hover
-                background: darken(#e8e8e8, 10% )
+                background: lighten(#f16d7f, 0 )
+                color: #ffffff
 
         &-content
             border-bottom: 1px solid #e8e8e8
             padding-left: 35px
             max-height: 0
             transition: all .35s
+            width: 100%
+            display: flex
+            flex-wrap: wrap
+            &-guest,
+            &-guest-register,
+                display: flex
+                flex-wrap: wrap
+                padding: 8px 0
+                input
+                    margin-right: 14px
+
+            &-guest-chk-out
+                width: 49%
+                display: flex
+                flex-direction: column
+            &-guest-chk-out-easy
+                color: #b3b2b2
+                font-size: 13px
+                font-weight: 400
+                line-height: 20px
+                text-align: left
+                margin: 0
+                padding-top: 16px
+                &::before
+                    content: "\f101"
+            &-header
+                color: #222222
+                font-size: 13px
+                font-weight: 700
+                text-transform: uppercase
+                &_h4,
+                &_label,
+                    font-size: 12px
+                    font-weight: 700
+                &-spacer
+                    padding-top: 22px
+            &-member
+                display: flex
+                flex-direction: column
 
 .footer-top
     height: 438px
