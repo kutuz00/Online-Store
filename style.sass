@@ -751,7 +751,7 @@ details[open] > .producs-menu-category::after
     padding-right: 0
     height: 37px
 
-.product-footer .offer-deteil h1
+.product-footer .offer-deteil h2
     font-size: 20px
     font-weight: 700
     letter-spacing: 0.5px
@@ -821,7 +821,7 @@ details[open] > .producs-menu-category::after
     justify-content: space-between
     padding: 0 142px
 
-.item-card h1
+.item-card h2
     color: #ef5b70
     font-size: 24px
     font-weight: 700
@@ -925,11 +925,6 @@ details[open] > .producs-menu-category::after
 .form-control-sm,
 .form-select-sm
     align-self: center
-
-.order-color-option
-    background-color: #1fd71f
-    width: 20px
-    height: 20px
 
 .may-like
     padding-top: 720px
@@ -1361,6 +1356,7 @@ details[open] > .producs-menu-category::after
     &-button,
     &-reset,
     &-login,
+    &-continue,
         color: #4a4a4a
         font-size: 14px
         font-weight: 700
@@ -1378,6 +1374,7 @@ details[open] > .producs-menu-category::after
         &-coupon
             padding: 11px 18px
             font-size: 11px
+            width: max-content
         &_chk-out
             font-size: 16px
             padding: 16px 42px
@@ -1518,6 +1515,27 @@ details[open] > .producs-menu-category::after
             &-member
                 display: flex
                 flex-direction: column
+                width: 35%
+                &-login-form
+                    border: 1px solid #eaeaea
+                    height: 45px
+                    margin-bottom: 22px
+                    margin-top: 8px
+                    &-highlight
+                        color: #ff0d0d
+                        line-height: 20px
+                        font-weight: 400
+                        font-size: 13px
+                    &-login
+                        display: flex
+                        padding-top: 16px
+                        width: 100%
+                        &-txt
+                            margin: 0
+                            align-self: center
+                        &_login
+                            padding: 16px 53px
+                            margin-right: 32px
 
 .footer-top
     height: 438px

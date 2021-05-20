@@ -1041,7 +1041,7 @@ details[open] > .producs-menu-category::after {
   height: 37px;
 }
 
-.product-footer .offer-deteil h1 {
+.product-footer .offer-deteil h2 {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -1144,7 +1144,7 @@ details[open] > .producs-menu-category::after {
   padding: 0 142px;
 }
 
-.item-card h1 {
+.item-card h2 {
   color: #ef5b70;
   font-size: 24px;
   font-weight: 700;
@@ -1287,12 +1287,6 @@ details[open] > .producs-menu-category::after {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-}
-
-.order-color-option {
-  background-color: #1fd71f;
-  width: 20px;
-  height: 20px;
 }
 
 .may-like {
@@ -1956,7 +1950,7 @@ details[open] > .producs-menu-category::after {
   margin-bottom: 63px;
 }
 
-.shoping-cart-buttons-button, .shoping-cart-buttons-reset, .shoping-cart-buttons-login {
+.shoping-cart-buttons-button, .shoping-cart-buttons-reset, .shoping-cart-buttons-login, .shoping-cart-buttons-continue {
   color: #4a4a4a;
   font-size: 14px;
   font-weight: 700;
@@ -1966,12 +1960,12 @@ details[open] > .producs-menu-category::after {
   padding: 13.5px 39px;
 }
 
-.shoping-cart-buttons-button:hover, .shoping-cart-buttons-reset:hover, .shoping-cart-buttons-login:hover {
+.shoping-cart-buttons-button:hover, .shoping-cart-buttons-reset:hover, .shoping-cart-buttons-login:hover, .shoping-cart-buttons-continue:hover {
   background-color: #f16d7f;
   color: #fff;
 }
 
-.shoping-cart-buttons-button-quote, .shoping-cart-buttons-reset-quote, .shoping-cart-buttons-login-quote {
+.shoping-cart-buttons-button-quote, .shoping-cart-buttons-reset-quote, .shoping-cart-buttons-login-quote, .shoping-cart-buttons-continue-quote {
   font-size: 11px;
   padding: 11px 14px;
   width: -webkit-max-content;
@@ -1979,12 +1973,15 @@ details[open] > .producs-menu-category::after {
   width: max-content;
 }
 
-.shoping-cart-buttons-button-coupon, .shoping-cart-buttons-reset-coupon, .shoping-cart-buttons-login-coupon {
+.shoping-cart-buttons-button-coupon, .shoping-cart-buttons-reset-coupon, .shoping-cart-buttons-login-coupon, .shoping-cart-buttons-continue-coupon {
   padding: 11px 18px;
   font-size: 11px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
-.shoping-cart-buttons-button_chk-out, .shoping-cart-buttons-reset_chk-out, .shoping-cart-buttons-login_chk-out {
+.shoping-cart-buttons-button_chk-out, .shoping-cart-buttons-reset_chk-out, .shoping-cart-buttons-login_chk-out, .shoping-cart-buttons-continue_chk-out {
   font-size: 16px;
   padding: 16px 42px;
   color: #ffffff;
@@ -1992,12 +1989,12 @@ details[open] > .producs-menu-category::after {
   width: 100%;
 }
 
-.shoping-cart-buttons-button_chk-out:hover, .shoping-cart-buttons-reset_chk-out:hover, .shoping-cart-buttons-login_chk-out:hover {
+.shoping-cart-buttons-button_chk-out:hover, .shoping-cart-buttons-reset_chk-out:hover, .shoping-cart-buttons-login_chk-out:hover, .shoping-cart-buttons-continue_chk-out:hover {
   background-color: #ffffff;
   color: #f16d7f;
 }
 
-.shoping-cart-buttons-button_continue, .shoping-cart-buttons-reset_continue, .shoping-cart-buttons-login_continue {
+.shoping-cart-buttons-button_continue, .shoping-cart-buttons-reset_continue, .shoping-cart-buttons-login_continue, .shoping-cart-buttons-continue_continue {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -2216,6 +2213,41 @@ details[open] > .producs-menu-category::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 35%;
+}
+
+.accordion .tab-content-member-login-form {
+  border: 1px solid #eaeaea;
+  height: 45px;
+  margin-bottom: 22px;
+  margin-top: 8px;
+}
+
+.accordion .tab-content-member-login-form-highlight {
+  color: #ff0d0d;
+  line-height: 20px;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.accordion .tab-content-member-login-form-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 16px;
+  width: 100%;
+}
+
+.accordion .tab-content-member-login-form-login-txt {
+  margin: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.accordion .tab-content-member-login-form-login_login {
+  padding: 16px 53px;
+  margin-right: 32px;
 }
 
 .footer-top {

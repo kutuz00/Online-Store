@@ -5,620 +5,616 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css"
         integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <title>Checkout</title>
 </head>
 
 <body>
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css"
-            integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-    </head>
-
-    <body>
-        <header>
-            <div class="top-wrapper">
-                <div class="header">
-                    <div class="top  container">
-                        <div class="top-left logo "> <a class="logo-link" href="index.html">
-                                <h1 class="logo-txt"> Bran<span class="accent-txt accent-font">d</span></h1>
-                            </a>
-                            <div class="form-wrap">
-                                <form class="search" action="#">
-                                    <details>
-                                        <summary class="browse">Browse</summary>
-                                        <div class="browse-show">
-                                            <h2 class="browse-header">WOMEN</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li> Tops</li>
-                                                <li> Sweaters/Knits</li>
-                                                <li> Jackets/Coats</li>
-                                                <li> Blazers</li>
-                                                <li> Denim</li>
-                                                <li> Leggings/Pants</li>
-                                                <li> Skirts/Shorts</li>
-                                                <li> Accessories </li>
-                                                <li> Bags/Purses</li>
-                                                <li> Swimwear/Underwear</li>
-                                                <li> Nightwear</li>
-                                                <li> Shoes</li>
-                                                <li> Beauty</li>
-                                            </ul>
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Tees/Tank tops </li>
-                                                <li>Shirts/Polos </li>
-                                                <li>Sweaters </li>
-                                                <li>Sweatshirts/Hoodies</li>
-                                                <li>Blazers </li>
-                                                <li>Jackets/vests </li>
-                                            </ul>
-                                        </div>
-                                    </details> <input class="input" placeholder="Search for Item..."></input> <button
-                                        class="submit" type="submit"><span class="fa fa-search"></span></button>
-                                </form>
-                            </div>
-                        </div>
-                        <aside class="top-right">
-
-
-                            <nav class="cart"><a href="#"><img src="img/cart.svg">
-                                    <div class="cart-container">
-                                        <div class="item-in-cart"><img src="img/cart-item-img.png" class="">
-                                            <div class="item-description">
-                                                <h3 class="cart-item-name">Rebox Zane</h3>
-                                                <div class="rate"><span class="far fa-star"></span>
-                                                    <span class="far fa-star"></span>
-                                                    <span class="far fa-star"></span>
-                                                    <span class="far fa-star"></span>
-                                                    <span class="far fa-star-half-full"></span>
-                                                </div>
-                                                <h4 class="accent-txt">1 x $250</h4>
-                                            </div>
-
-                                        </div>
-
-
-                                        <div class="item-in-cart"><img src="img/cart-item-img-2.png">
-                                            <div class="item-description">
-                                                <h3 class="cart-item-name">Rebox Zane</h3>
-                                                <div class="rate"><span class="far fa-star"></span>
-                                                    <span class="far fa-star"></span>
-                                                    <span class="far fa-star"></span>
-                                                    <span class="far fa-star"></span>
-                                                    <span class="far fa-star-half-full"></span>
-                                                </div>
-                                                <h4 class="accent-txt">1 x $250</h4>
-                                            </div>
-                                        </div>
-                                        <div class="sub-total">
-                                            <h3 class="sub-total">TOTAL </h3>
-                                            <h3>$500.00</h3>
-                                        </div>
-
-                                        <div class="cart-btns"><a href="#" class="cart-btn">Checkout</a>
-                                            <a href="#" class="cart-btn cart-btn-to-cart">Go to cart</a>
-                                        </div>
+    <header>
+        <div class="top-wrapper">
+            <div class="header">
+                <div class="top  container">
+                    <div class="top-left logo "> <a class="logo-link" href="index.html">
+                            <h1 class="logo-txt"> Bran<span class="accent-txt accent-font">d</span></h1>
+                        </a>
+                        <div class="form-wrap">
+                            <form class="search" action="#">
+                                <details>
+                                    <summary class="browse">Browse</summary>
+                                    <div class="browse-show">
+                                        <h2 class="browse-header">WOMEN</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li> Tops</li>
+                                            <li> Sweaters/Knits</li>
+                                            <li> Jackets/Coats</li>
+                                            <li> Blazers</li>
+                                            <li> Denim</li>
+                                            <li> Leggings/Pants</li>
+                                            <li> Skirts/Shorts</li>
+                                            <li> Accessories </li>
+                                            <li> Bags/Purses</li>
+                                            <li> Swimwear/Underwear</li>
+                                            <li> Nightwear</li>
+                                            <li> Shoes</li>
+                                            <li> Beauty</li>
+                                        </ul>
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Tees/Tank tops </li>
+                                            <li>Shirts/Polos </li>
+                                            <li>Sweaters </li>
+                                            <li>Sweatshirts/Hoodies</li>
+                                            <li>Blazers </li>
+                                            <li>Jackets/vests </li>
+                                        </ul>
                                     </div>
-                                </a>
-
-
-
-
-
-
-                            </nav>
-                            <p class="button-my-account">My Account</p>
-
-                        </aside>
+                                </details> <input class="input" placeholder="Search for Item..." /><button
+                                    class="submit" type="submit"><span class="fa fa-search"></span></button>
+                            </form>
+                        </div>
                     </div>
-                </div>
+                    <aside class="top-right">
 
-                <nav class="top-menu container">
-                    <div>
-                        <ul class="navigation">
-                            <li class="menu">Home</li>
-                            <li class="menu">Men <div class="product-categories">
-                                    <div class="product-categories-flex-contaiener">
-                                        <div class="flex-links">
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                                <li>Jackets/Coats</li>
-                                                <li>Blazers</li>
-                                                <li>Denim</li>
-                                                <li>Leggings/Pants</li>
-                                                <li>Skirts/Shorts</li>
-                                                <li>Accessories </li>
-                                            </ul>
+
+                        <nav class="cart"><a href="#"><img src="img/cart.svg" alt="cart"></a>
+                            <div class="cart-container">
+                                <div class="item-in-cart"><img src="img/cart-item-img.png" alt="item">
+                                    <div class="item-description">
+                                        <h3 class="cart-item-name">Rebox Zane</h3>
+                                        <div class="rate"><span class="far fa-star"></span>
+                                            <span class="far fa-star"></span>
+                                            <span class="far fa-star"></span>
+                                            <span class="far fa-star"></span>
+                                            <span class="far fa-star-half-full"></span>
                                         </div>
-                                        <div class="flex-links">
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                                <li>Jackets/Coats</li>
-                                            </ul>
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                            </ul>
+                                        <h4 class="accent-txt">1 x $250</h4>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="item-in-cart"><img src="img/cart-item-img-2.png" alt="item">
+                                    <div class="item-description">
+                                        <h3 class="cart-item-name">Rebox Zane</h3>
+                                        <div class="rate"><span class="far fa-star"></span>
+                                            <span class="far fa-star"></span>
+                                            <span class="far fa-star"></span>
+                                            <span class="far fa-star"></span>
+                                            <span class="far fa-star-half-full"></span>
                                         </div>
-                                        <div class="flex-links">
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                                <li>Jackets/Coats</li>
-                                            </ul>
-                                            <h1 class="menu-banner-h1">Super
-                                                sale!</h1>
-                                            <div class="rectangle"></div> <img class="menu-banner"
-                                                src="img/menu-banner.png" alt="man">
-                                        </div>
+                                        <h4 class="accent-txt">1 x $250</h4>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="menu">Women<div class="product-categories">
-                                    <div class="product-categories-flex-contaiener">
-                                        <div class="flex-links">
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                                <li>Jackets/Coats</li>
-                                                <li>Blazers</li>
-                                                <li>Denim</li>
-                                                <li>Leggings/Pants</li>
-                                                <li>Skirts/Shorts</li>
-                                                <li>Accessories </li>
-                                            </ul>
-                                        </div>
-                                        <div class="flex-links">
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                                <li>Jackets/Coats</li>
-                                            </ul>
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                            </ul>
-                                        </div>
-                                        <div class="flex-links">
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                                <li>Jackets/Coats</li>
-                                            </ul>
-                                            <h1 class="menu-banner-h1">Super
-                                                sale!</h1>
-                                            <div class="rectangle"></div>
-                                            <img class="menu-banner" src="img/menu-banner.png" alt="man">
+                                <div class="sub-total">
+                                    <h3 class="sub-total">TOTAL </h3>
+                                    <h3>$500.00</h3>
+                                </div>
 
-                                        </div>
-                                    </div>
-                            </li>
-                            <li class="menu">Kids<div class="product-categories">
-                                    <div class="product-categories-flex-contaiener">
-                                        <div class="flex-links">
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                                <li>Jackets/Coats</li>
-                                                <li>Blazers</li>
-                                                <li>Denim</li>
-                                                <li>Leggings/Pants</li>
-                                                <li>Skirts/Shorts</li>
-                                                <li>Accessories </li>
-                                            </ul>
-                                        </div>
-                                        <div class="flex-links">
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                                <li>Jackets/Coats</li>
-                                            </ul>
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                            </ul>
-                                        </div>
-                                        <div class="flex-links">
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                                <li>Jackets/Coats</li>
-                                            </ul>
-                                            <h1 class="menu-banner-h1">Super
-                                                sale!</h1>
-                                            <div class="rectangle"></div> <img class="menu-banner"
-                                                src="img/menu-banner.png" alt="man">
-                                        </div>
-                                    </div>
-                            </li>
-                            <li class="menu reverse ">Accoseriese<div class="product-categories">
-                                    <div class="product-categories-flex-contaiener">
-                                        <div class="flex-links">
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                                <li>Jackets/Coats</li>
-                                                <li>Blazers</li>
-                                                <li>Denim</li>
-                                                <li>Leggings/Pants</li>
-                                                <li>Skirts/Shorts</li>
-                                                <li>Accessories </li>
-                                            </ul>
-                                        </div>
-                                        <div class="flex-links">
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                                <li>Jackets/Coats</li>
-                                            </ul>
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                            </ul>
-                                        </div>
-                                        <div class="flex-links">
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                                <li>Jackets/Coats</li>
-                                            </ul>
-                                            <h1 class="menu-banner-h1">Super
-                                                sale!</h1>
-                                            <div class="rectangle"></div> <img class="menu-banner"
-                                                src="img/menu-banner.png" alt="man">
-                                        </div>
-                                    </div>
-                            </li>
-                            <li class="menu reverse">Featured<div class="product-categories">
-                                    <div class="product-categories-flex-contaiener">
-                                        <div class="flex-links">
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                                <li>Jackets/Coats</li>
-                                                <li>Blazers</li>
-                                                <li>Denim</li>
-                                                <li>Leggings/Pants</li>
-                                                <li>Skirts/Shorts</li>
-                                                <li>Accessories </li>
-                                            </ul>
-                                        </div>
-                                        <div class="flex-links">
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                                <li>Jackets/Coats</li>
-                                            </ul>
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                            </ul>
-                                        </div>
-                                        <div class="flex-links">
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                                <li>Jackets/Coats</li>
-                                            </ul>
-                                            <h1 class="menu-banner-h1">Super
-                                                sale!</h1>
-                                            <div class="rectangle"></div> <img class="menu-banner"
-                                                src="img/menu-banner.png" alt="man">
-                                        </div>
-                                    </div>
-                            </li>
-                            <li class="menu reverse">Hot Deals <div class="product-categories">
-                                    <div class="product-categories-flex-contaiener">
-                                        <div class="flex-links">
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                                <li>Jackets/Coats</li>
-                                                <li>Blazers</li>
-                                                <li>Denim</li>
-                                                <li>Leggings/Pants</li>
-                                                <li>Skirts/Shorts</li>
-                                                <li>Accessories </li>
-                                            </ul>
-                                        </div>
-                                        <div class="flex-links">
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                                <li>Jackets/Coats</li>
-                                            </ul>
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                            </ul>
-                                        </div>
-                                        <div class="flex-links">
-                                            <h2 class="browse-header">Men</h2>
-                                            <ul class="browse-links">
-                                                <li>Dresses</li>
-                                                <li>Tops</li>
-                                                <li>Sweaters/Knits</li>
-                                                <li>Jackets/Coats</li>
-                                            </ul>
-                                            <h1 class="menu-banner-h1">Super
-                                                sale!</h1>
-                                            <div class="rectangle"></div> <img class="menu-banner"
-                                                src="img/menu-banner.png" alt="man">
-                                        </div>
-                                    </div>
-                            </li>
-                        </ul>
-                </nav>
-            </div>
-
-        </header>
-        <section>
-            <article class="content">
-                <header class="sp-banner">
-                    <div class="sp-banner-top container">
-                        <h2 class="accent-txt sp-banner-accent sp-banner-left">New Arrivals </h2>
-                        <div> <span class="sp-banner-right">Home /</span><span class="sp-banner-right">Men / </span>
-                            <span class="accent-txt sp-banner-accent sp-banner-right">New Arrivals</span>
-                        </div>
-                    </div>
-
-                </header>
-            </article>
-            <div class="accordion container">
-
-                <div class="tab">
-                    <input class="tab-input" type="radio" name="accordion" id="shiping-address" checked>
-                    <label class="tab-label" for="shiping-address">01. Shipping Adress</label>
-                    <div class="tab-content">
-                        <form class="tab-content-guest-chk-out" id="guest-chk-out" action="#">
-                            <h3 class="tab-content-header">Check as a guest or register</h3>
-                            <p>Register with us for future convenience</p>
-                            <div class="tab-content-guest">
-                                <input type="radio" name="guest-chk-out" id="guest"><label
-                                    class="tab-content-header tab-content-header_label" for="guest">checkout as
-                                    guest</label>
-                            </div>
-                            <div class="tab-content-guest-register">
-
-                                <input type="radio" name="guest-chk-out" id="register" checked><label
-                                    class=" tab-content-header tab-content-header_label" for="register">register</label>
-
+                                <div class="cart-btns">
+                                    <a class="cart-btn" href="#">Checkout</a>
+                                    <a class="cart-btn cart-btn-to-cart" href="#">Go to cart</a>
+                                </div>
                             </div>
 
-                            <h3 class="tab-content-header tab-content-header-spacer">register and save time!</h3>
-                            <p>Register with us for future convenience</p>
-                            <p class="tab-content-guest-chk-out-easy"> Fast and easy checkout</p>
-                            <p class="tab-content-guest-chk-out-easy"> Easy access to your order history and status
-                            </p>
-                            <button class="shoping-cart-buttons-button shoping-cart-buttons-button_continue"
-                                for="guest-chk-out">Continue</button>
-
-                        </form>
-
-                        <form class="tab-content-member" id="member" action="#">
-                            <h3 class="tab-content-header">Already registed?</h3>
-                            <p>Please log in below</p>
-                            <h4 class="tab-content-header_h4">EMAIL ADDRESS *</h4>
-                            <input type="text" for="member" required>
-                            <h4 class="tab-content-header_h4">PASSWORD *</h4>
-                            <input type="text" for="member" required>
-                            <p>* Required Fileds</p>
-                            <button class="shoping-cart-buttons-login" for="member">Log in</button>
-                            <p>Forgot Password ?</p>
-
-                        </form>
-
-
-
-
-                    </div>
-
-
-                </div>
-                <div class="tab"><input class="tab-input" type="radio" name="accordion" id="billing-info">
-                    <label class="tab-label" for="billing-info">02. BILLING INFORMATION</label>
-                    <div class="tab-content">
-
-                        <h1>Content</h1>
-                        <p>Hello World</p>
-                    </div>
-                </div>
-                <div class="tab"><input class="tab-input" type="radio" name="accordion" id="shiping-info">
-                    <label class="tab-label" for="shiping-info">03. SHIPPING INFORMATION</label>
-                    <div class="tab-content">
-
-                        <h1>Content</h1>
-                    </div>
-                </div>
-                <div class="tab"><input class="tab-input" type="radio" name="accordion" id="shiping-method">
-                    <label class="tab-label" for="shiping-method">04. SHIPPING METHOD</label>
-                    <div class="tab-content">
-
-                        <h1>Content</h1>
-                    </div>
-                </div>
-                <div class="tab"><input class="tab-input" type="radio" name="accordion" id="payment-method">
-                    <label class="tab-label" for="payment-method">05. PAYMENT METHOD</label>
-                    <div class="tab-content">
-
-                        <h1>Content</h1>
-                    </div>
-                </div>
-                <div class="tab"><input class="tab-input" type="radio" name="accordion" id="order-review">
-                    <label class="tab-label" for="order-review">06. ORDER REVIEW</label>
-                    <div class="tab-content">
-
-                        <h1>Content</h1>
-                    </div>
-                </div>
-
-
-
-            </div>
-
-        </section>
 
 
 
 
 
-        <footer class="footer">
-            <article class="footer-top">
-                <div class="footer-top-content container">
-                    <aside class="footer-message"> <img src="img/contact-image-shape.png" alt="photo">
-                        <div class="message-wrap">
-                            <blockquote>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
-                                condimentum a. Aliquam condimentum mattis neque sed pretium” </blockquote>
-                            <footer>
-                                <h4 class="accent-txt">Burhan</h4>
-                                <p>Dhaka, Bd </p>
-                            </footer>
 
+                        </nav>
+                        <p class="button-my-account">My Account</p>
 
-                            <div class="dots">
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                            </div>
-                        </div>
                     </aside>
-                    <div class="footer-line"> </div>
-                    <div class="footer-subscribe">
-                        <h1 class="subscribe-h1">Subscribe</h1>
-                        <p class="subscribe-p">FOR OUR NEWLETTER AND PROMOTION</p>
-                        <form class="subscribe" action="#"> <input class="subscribe-form-input"
-                                placeholder="Enter Your Email" required pattern="\S+@[a-z].+[a-z]+"><button
-                                class="subscribe-form-button" type="submit">Subscribe</button> </form>
+                </div>
+            </div>
+
+            <nav class="top-menu container">
+                <div>
+                    <ul class="navigation">
+                        <li class="menu">Home</li>
+                        <li class="menu">Men <div class="product-categories">
+                                <div class="product-categories-flex-contaiener">
+                                    <div class="flex-links">
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                            <li>Jackets/Coats</li>
+                                            <li>Blazers</li>
+                                            <li>Denim</li>
+                                            <li>Leggings/Pants</li>
+                                            <li>Skirts/Shorts</li>
+                                            <li>Accessories </li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex-links">
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                            <li>Jackets/Coats</li>
+                                        </ul>
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex-links">
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                            <li>Jackets/Coats</li>
+                                        </ul>
+                                        <h2 class="menu-banner-h1">Super
+                                            sale!</h2>
+                                        <div class="rectangle"></div> <img class="menu-banner" src="img/menu-banner.png"
+                                            alt="man">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu">Women<div class="product-categories">
+                                <div class="product-categories-flex-contaiener">
+                                    <div class="flex-links">
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                            <li>Jackets/Coats</li>
+                                            <li>Blazers</li>
+                                            <li>Denim</li>
+                                            <li>Leggings/Pants</li>
+                                            <li>Skirts/Shorts</li>
+                                            <li>Accessories </li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex-links">
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                            <li>Jackets/Coats</li>
+                                        </ul>
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex-links">
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                            <li>Jackets/Coats</li>
+                                        </ul>
+                                        <h2 class="menu-banner-h1">Super
+                                            sale!</h2>
+                                        <div class="rectangle"></div>
+                                        <img class="menu-banner" src="img/menu-banner.png" alt="man">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu">Kids<div class="product-categories">
+                                <div class="product-categories-flex-contaiener">
+                                    <div class="flex-links">
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                            <li>Jackets/Coats</li>
+                                            <li>Blazers</li>
+                                            <li>Denim</li>
+                                            <li>Leggings/Pants</li>
+                                            <li>Skirts/Shorts</li>
+                                            <li>Accessories </li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex-links">
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                            <li>Jackets/Coats</li>
+                                        </ul>
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex-links">
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                            <li>Jackets/Coats</li>
+                                        </ul>
+                                        <h2 class="menu-banner-h1">Super
+                                            sale!</h2>
+                                        <div class="rectangle"></div> <img class="menu-banner" src="img/menu-banner.png"
+                                            alt="man">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu reverse ">Accoseriese<div class="product-categories">
+                                <div class="product-categories-flex-contaiener">
+                                    <div class="flex-links">
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                            <li>Jackets/Coats</li>
+                                            <li>Blazers</li>
+                                            <li>Denim</li>
+                                            <li>Leggings/Pants</li>
+                                            <li>Skirts/Shorts</li>
+                                            <li>Accessories </li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex-links">
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                            <li>Jackets/Coats</li>
+                                        </ul>
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex-links">
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                            <li>Jackets/Coats</li>
+                                        </ul>
+                                        <h2 class="menu-banner-h1">Super
+                                            sale!</h2>
+                                        <div class="rectangle"></div> <img class="menu-banner" src="img/menu-banner.png"
+                                            alt="man">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu reverse">Featured<div class="product-categories">
+                                <div class="product-categories-flex-contaiener">
+                                    <div class="flex-links">
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                            <li>Jackets/Coats</li>
+                                            <li>Blazers</li>
+                                            <li>Denim</li>
+                                            <li>Leggings/Pants</li>
+                                            <li>Skirts/Shorts</li>
+                                            <li>Accessories </li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex-links">
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                            <li>Jackets/Coats</li>
+                                        </ul>
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex-links">
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                            <li>Jackets/Coats</li>
+                                        </ul>
+                                        <h3 class="menu-banner-h1">Super
+                                            sale!</h3>
+                                        <div class="rectangle"></div> <img class="menu-banner" src="img/menu-banner.png"
+                                            alt="man">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu reverse">Hot Deals <div class="product-categories">
+                                <div class="product-categories-flex-contaiener">
+                                    <div class="flex-links">
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                            <li>Jackets/Coats</li>
+                                            <li>Blazers</li>
+                                            <li>Denim</li>
+                                            <li>Leggings/Pants</li>
+                                            <li>Skirts/Shorts</li>
+                                            <li>Accessories </li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex-links">
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                            <li>Jackets/Coats</li>
+                                        </ul>
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex-links">
+                                        <h2 class="browse-header">Men</h2>
+                                        <ul class="browse-links">
+                                            <li>Dresses</li>
+                                            <li>Tops</li>
+                                            <li>Sweaters/Knits</li>
+                                            <li>Jackets/Coats</li>
+                                        </ul>
+                                        <h2 class="menu-banner-h1">Super
+                                            sale!</h2>
+                                        <div class="rectangle"></div> <img class="menu-banner" src="img/menu-banner.png"
+                                            alt="man">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+    <section>
+        <header class="content">
+            <div class="sp-banner">
+                <div class="sp-banner-top container">
+                    <h2 class="accent-txt sp-banner-accent sp-banner-left">New Arrivals </h2>
+                    <div> <span class="sp-banner-right">Home /</span><span class="sp-banner-right">Men / </span>
+                        <span class="accent-txt sp-banner-accent sp-banner-right">New Arrivals</span>
                     </div>
                 </div>
-            </article>
-            <article class="footer-bottom container">
-                <div class="our-testamony">
-                    <div class="logo "> <a class="logo-link" href="index.html">
-                            <h1 class="logo-txt"> Bran<span class="accent-txt accent-font">d</span></h1>
-                        </a></div>
-                    <p class="space-footer-p">Objectively transition extensive data rather than cross functional
-                        solutions.
-                        Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly
-                        syndicate an expanded array of processes and cross-unit partnerships.</p>
-                    <p>Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize
-                        superior
-                        initiatives for wireless technologies. Dynamically optimize. </p>
+
+            </div>
+        </header>
+        <div class="accordion container">
+
+            <div class="tab">
+                <input class="tab-input" type="radio" name="accordion" id="shiping-address" checked>
+                <label class="tab-label" for="shiping-address">01. Shipping Adress</label>
+                <div class="tab-content">
+                    <form class="tab-content-guest-chk-out" id="guest-chk-out" action="#">
+                        <h3 class="tab-content-header">Check as a guest or register</h3>
+                        <p>Register with us for future convenience</p>
+                        <div class="tab-content-guest">
+                            <input type="radio" name="guest-chk-out" id="guest"><label
+                                class="tab-content-header tab-content-header_label" for="guest">checkout as
+                                guest</label>
+                        </div>
+                        <div class="tab-content-guest-register">
+
+                            <input type="radio" name="guest-chk-out" id="register" checked><label
+                                class=" tab-content-header tab-content-header_label">register</label>
+
+                        </div>
+
+                        <h3 class="tab-content-header tab-content-header-spacer">register and save time!</h3>
+                        <p>Register with us for future convenience</p>
+                        <p class="tab-content-guest-chk-out-easy"> Fast and easy checkout</p>
+                        <p class="tab-content-guest-chk-out-easy"> Easy access to your order history and status
+                        </p>
+                        <button
+                            class="shoping-cart-buttons-button shoping-cart-buttons-button_continue">Continue</button>
+
+                    </form>
+
+                    <form class="tab-content-member" id="member" action="#">
+                        <h3 class="tab-content-header">Already registed?</h3>
+                        <p>Please log in below</p>
+                        <h4 class="tab-content-header_h4">EMAIL ADDRESS <span
+                                class="tab-content-member-login-form-highlight">*</span></h4>
+                        <input class="tab-content-member-login-form" type="text" required>
+                        <h4 class="tab-content-header_h4">PASSWORD <span
+                                class="tab-content-member-login-form-highlight">*</span></h4>
+                        <input class="tab-content-member-login-form" type="text" required>
+                        <p class="tab-content-member-login-form-highlight">* Required Fileds</p>
+                        <div class="tab-content-member-login-form-login">
+                            <button class="shoping-cart-buttons-login tab-content-member-login-form-login_login">Log
+                                in</button>
+                            <p class="tab-content-member-login-form-login-txt">Forgot Password ?</p>
+                        </div>
+
+
+                    </form>
+
+
+
+
                 </div>
-                <nav class="links">
-                    <div>
-                        <h2 class="links-header accent-txt">COMPANY</h2>
-                        <ul class="links-ul">
-                            <li> Home</li>
-                            <li>Shop</li>
-                            <li>About</li>
-                            <li>How It Works</li>
-                            <li> Contact</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="links-header accent-txt">INFORMATION</h2>
-                        <ul class="links-ul">
-                            <li>Tearms & Condition</li>
-                            <li> Privacy Policy</li>
-                            <li>How to Buy</li>
-                            <li>How to Sell</li>
-                            <li>Promotion</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="links-header accent-txt">SHOP CATEGORY</h2>
-                        <ul class="links-ul">
-                            <li>Men</li>
-                            <li> Women</li>
-                            <li>Child</li>
-                            <li> Apparel</li>
-                            <li>Brows All</li>
-                        </ul>
-                    </div>
-                </nav>
-            </article>
-            <article class="footer-end">
-                <div class="rights-social container">
-                    <p> © 2017 Brand All Rights Reserved.</p>
-                    <div class="social-links"> <span class="fab fa-facebook"></span> <span
-                            class="fab fa-twitter"></span>
-                        <span class="fab fa-linkedin"></span> <span class="fab fa-pinterest"></span> <span
-                            class="fab fa-google-plus"></span>
-                    </div>
+
+
+            </div>
+            <div class="tab"><input class="tab-input" type="radio" name="accordion" id="billing-info">
+                <label class="tab-label" for="billing-info">02. BILLING INFORMATION</label>
+                <div class="tab-content">
+
+                    <h2>Content</h2>
                 </div>
-            </article>
-        </footer>
+            </div>
+            <div class="tab"><input class="tab-input" type="radio" name="accordion" id="shiping-info">
+                <label class="tab-label" for="shiping-info">03. SHIPPING INFORMATION</label>
+                <div class="tab-content">
+
+                    <h2>Content</h2>
+                </div>
+            </div>
+            <div class="tab"><input class="tab-input" type="radio" name="accordion" id="shiping-method">
+                <label class="tab-label" for="shiping-method">04. SHIPPING METHOD</label>
+                <div class="tab-content">
+
+                    <h2>Content</h2>
+                </div>
+            </div>
+            <div class="tab"><input class="tab-input" type="radio" name="accordion" id="payment-method">
+                <label class="tab-label" for="payment-method">05. PAYMENT METHOD</label>
+                <div class="tab-content">
+
+                    <h2>Content</h2>
+                </div>
+            </div>
+            <div class="tab"><input class="tab-input" type="radio" name="accordion" id="order-review">
+                <label class="tab-label" for="order-review">06. ORDER REVIEW</label>
+                <div class="tab-content">
+
+                    <h2>Content</h2>
+                </div>
+            </div>
 
 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
-            crossorigin="anonymous"></script>
+        </div>
 
-    </body>
+    </section>
 
-    </html>
+
+
+
+
+    <footer class="footer">
+        <article class="footer-top">
+            <div class="footer-top-content container">
+                <aside class="footer-message"> <img src="img/contact-image-shape.png" alt="photo">
+                    <div class="message-wrap">
+                        <blockquote>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
+                            condimentum a. Aliquam condimentum mattis neque sed pretium” </blockquote>
+                        <div>
+                            <h4 class="accent-txt">Burhan</h4>
+                            <p>Dhaka, Bd </p>
+                        </div>
+
+
+                        <div class="dots">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </aside>
+                <div class="footer-line"> </div>
+                <div class="footer-subscribe">
+                    <h2 class="subscribe-h1">Subscribe</h2>
+                    <p class="subscribe-p">FOR OUR NEWLETTER AND PROMOTION</p>
+                    <form class="subscribe" action="#"> <input class="subscribe-form-input"
+                            placeholder="Enter Your Email" required pattern="\S+@[a-z].+[a-z]+"><button
+                            class="subscribe-form-button" type="submit">Subscribe</button> </form>
+                </div>
+            </div>
+        </article>
+        <section class="footer-bottom container">
+            <div class="our-testamony">
+                <div class="logo "> <a class="logo-link" href="index.html">
+                        <h2 class="logo-txt"> Bran<span class="accent-txt accent-font">d</span></h2>
+                    </a></div>
+                <p class="space-footer-p">Objectively transition extensive data rather than cross functional
+                    solutions.
+                    Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly
+                    syndicate an expanded array of processes and cross-unit partnerships.</p>
+                <p>Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize
+                    superior
+                    initiatives for wireless technologies. Dynamically optimize. </p>
+            </div>
+            <nav class="links">
+                <div>
+                    <h2 class="links-header accent-txt">COMPANY</h2>
+                    <ul class="links-ul">
+                        <li> Home</li>
+                        <li>Shop</li>
+                        <li>About</li>
+                        <li>How It Works</li>
+                        <li> Contact</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="links-header accent-txt">INFORMATION</h2>
+                    <ul class="links-ul">
+                        <li>Tearms & Condition</li>
+                        <li> Privacy Policy</li>
+                        <li>How to Buy</li>
+                        <li>How to Sell</li>
+                        <li>Promotion</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="links-header accent-txt">SHOP CATEGORY</h2>
+                    <ul class="links-ul">
+                        <li>Men</li>
+                        <li> Women</li>
+                        <li>Child</li>
+                        <li> Apparel</li>
+                        <li>Brows All</li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <aside class="footer-end">
+            <div class="rights-social container">
+                <p> © 2017 Brand All Rights Reserved.</p>
+                <div class="social-links"> <span class="fab fa-facebook"></span> <span class="fab fa-twitter"></span>
+                    <span class="fab fa-linkedin"></span> <span class="fab fa-pinterest"></span> <span
+                        class="fab fa-google-plus"></span>
+                </div>
+            </div>
+        </aside>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
