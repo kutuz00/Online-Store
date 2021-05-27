@@ -1459,40 +1459,31 @@ details[open] > .producs-menu-category::after {
 }
 
 .deals-men {
-  background-image: url(img/deals-men.png);
-  height: 100%;
-  background-repeat: no-repeat;
   -ms-flex-preferred-size: 542px;
       flex-basis: 542px;
+  position: relative;
 }
 
 .deals-women {
-  background-image: url(img/deals-women.png);
-  height: 100%;
-  background-repeat: no-repeat;
   -ms-flex-preferred-size: 261px;
       flex-basis: 261px;
+  position: relative;
 }
 
 .deals-kids {
-  background-image: url(img/deals-kids.png);
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: center bottom;
   -ms-flex-preferred-size: 542px;
       flex-basis: 542px;
+  position: relative;
 }
 
 .deals-accr {
-  background-color: #dadad2;
-  background-image: url(img/deals-accr.png);
-  background-repeat: no-repeat;
   -ms-flex-preferred-size: 261px;
       flex-basis: 261px;
+  position: relative;
 }
 
 .deals-badge {
-  position: relative;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
