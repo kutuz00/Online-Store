@@ -36,4 +36,4 @@ const renderGoodsList = (list = goods) => {
     $goodsList.insertAdjacentHTML('beforeend', goodsList);
 }
 
-r enderGoodsList();
+renderGoodsList();

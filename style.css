@@ -1525,7 +1525,7 @@ details[open] > .producs-menu-category::after {
       justify-content: space-around;
 }
 
-.featured h1 {
+.featured h2 {
   font-weight: 700;
   font-size: 30px;
   text-align: center;
@@ -1688,12 +1688,10 @@ details[open] > .producs-menu-category::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   color: #fbfbfb;
 }
 
-.offer-ad h1 {
+.offer-ad h2 {
   font-size: 20px;
   font-weight: 700;
   text-align: left;
@@ -1722,6 +1720,7 @@ details[open] > .producs-menu-category::after {
       flex-basis: 767px;
   padding: 146px 0 0 39px;
   background-repeat: no-repeat;
+  background-size: cover;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -1766,7 +1765,7 @@ details[open] > .producs-menu-category::after {
           box-sizing: border-box;
 }
 
-.offer-deteil h1 {
+.offer-deteil h2 {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
