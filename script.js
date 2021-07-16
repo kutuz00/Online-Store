@@ -54,12 +54,10 @@ class ItemInCart extends Item {
     </div>`;
     }
 }
-
-
 class ItemsList {
     constructor(items, container) {
         this._items = items;
-        this._$itemsListContainer = container
+        this._$itemsListContainer = container;
     }
 
     renderItemsList() {
@@ -71,7 +69,12 @@ class ItemsList {
     }
     totalPrice() {
         let sumToCheckout = this._items.map(item => item.getPrice());
-        return sumToCheckout += sumToCheckout;
+        let sum = 0;
+
+        for (let item in sumToCheckout) {
+            sum += sumToCheckout[item];
+        }
+        return `<h3>$ ${sum.toFixed(2)}</h3>`;
     }
 }
 
@@ -80,15 +83,15 @@ const list = new ItemsList([
     new Item('Mango People T-shirt', 152.00, 'img/1.1.png'),
     new Item('Mango People T-shirt', 152.00, 'img/1.1.png'),
     new Item('Mango People T-shirt', 152.00, 'img/1.1.png'),
-], document.querySelector('.products-wrap'))
+], document.querySelector('.products-wrap'));
 
 const cart = new ItemsList([
-    new ItemInCart('Mango People T-shirt', 152.00, 'img/cart-item-img.png'),
-    new ItemInCart('Mango People T-shirt', 152.00, 'img/cart-item-img-2.png'),
-    new ItemInCart('Mango People T-shirt', 152.00, 'img/cart-item-img-2.png'),
-], document.querySelector('.cart-container'))
+    new ItemInCart('Mango People T-shirt', 149.99, 'img/cart-item-img.png', 2),
+    new ItemInCart('Mango People T-shirt', 99.99, 'img/cart-item-img-2.png', 2),
+], document.querySelector('.cart-container'));
 
 list.renderItemsList();
 cart.renderItemsList();
-console.log(cart.totalPrice());
+
+document.querySelector('.sub-total').insertAdjacentHTML("beforeend", cart.totalPrice());
 
