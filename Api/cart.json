@@ -1,0 +1,16 @@
+[
+    {
+        "id_product": 123,
+        "title": "Mango People T-shirt",
+        "price": 52,
+        "qty": 2,
+        "productImgUrl": "./img/cart-item-img-2.png"
+    },
+    {
+        "id_product": 456,
+        "title": "Mango People T-shirt",
+        "price": 52,
+        "qty": 2,
+        "productImgUrl": "./img/cart-item-img.png"
+    }
+]
