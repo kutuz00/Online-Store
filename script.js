@@ -1,8 +1,26 @@
+function makeGETRequest(url, callback) {
+    var xhr;
+
+    if (window.XMLHttpRequest) {
+        xhr = new XMLHttpRequest();
+    } else if (window.ActiveXObject) {
+        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            callback(xhr.responseText);
+        }
+    }
+
+    xhr.open('GET', url, true);
+    xhr.send();
+}
 class Item {
-    constructor(title, price, itemImg) {
+    constructor(title, price, imgUrl) {
         this._title = title;
         this._price = +price;
-        this._itemImg = itemImg;
+        this._imgUrl = imgUrl;
     }
 
     getPrice() {
@@ -11,11 +29,11 @@ class Item {
 
     render() {
         return `<div class="product-item">
-        <a class="item-link" href="#"><img class="product-img" src="${this._itemImg}" alt="item photo">
+        <a class="item-link" href="#"><img class="product-img" src="${this._imgUrl}" alt="item photo">
             <div class="item-desc">
                 <p class="item-name">${this._title}</p>
                 <p class="item-price">$ ${this._price}</p>
-            </div>
+            </div> 
         </a>
         <div class="add-to-cart">
             <a class="add" href="http://google.com"><img src="img/add-to_cart.svg" alt="add to cart">
@@ -28,8 +46,8 @@ class Item {
 }
 
 class ItemInCart extends Item {
-    constructor(title, price, itemImg, quantity = 1) {
-        super(title, +price, itemImg);
+    constructor(title, price, productImgUrl, quantity = 1) {
+        super(title, +price, productImgUrl);
 
         this._quantity = +quantity;
     }
@@ -39,7 +57,7 @@ class ItemInCart extends Item {
     }
 
     render() {
-        return ` <div class="item-in-cart"><img src="${this._itemImg}" alt="item">
+        return ` <div class="item-in-cart"><img src="${this._imgUrl}" alt="item">
         <div class="item-description">
             <h3 class="cart-item-name">${this._title}</h3>
             <div class="rate"><span class="far fa-star"></span>
@@ -59,16 +77,30 @@ class ItemsList {
         this._items = items;
         this._$itemsListContainer = container;
     }
+    set $itemsListContainer(container) {
+        this._$itemsListContainer = container;
+    }
 
-    renderItemsList() {
-        let goodsList = this._items.map(
-            item => item.render()
-        ).join(' ');
+    renderItemsList(ListLocation) {
+        let listHtml = '';
+        this._items.map(item => {
+            let goodItem = [new ListLocation(item.title, item.price, item.productImgUrl, item.qty)];
+            listHtml += goodItem.render();
+        });
+        this._$itemsListContainer.insertAdjacentHTML('afterbegin', listHtml);
 
-        this._$itemsListContainer.insertAdjacentHTML('afterbegin', goodsList);
+
+
+        // let itemsList = this. _items.map(
+        //     item => item.render(new Item(item.title, item.price))
+        // ).join(' ');
+
+        // this._$itemsListContainer.insertAdjacentHTML('afterbegin', itemsList);
     }
     totalPrice() {
-        let sumToCheckout = this._items.map(item => item.getPrice());
+        let sumToCheckout = [];
+        this._items.map(item => sumToCheckout.push(item.getPrice()));
+        console.log(sumToCheckout);
         let sum = 0;
 
         for (let item in sumToCheckout) {
@@ -76,22 +108,49 @@ class ItemsList {
         }
         return `<h3>$ ${sum.toFixed(2)}</h3>`;
     }
+    fetchItems(callback, url) {
+        makeGETRequest(url, (items) => {
+            this._items = JSON.parse(items);
+            callback();
+        })
+    }
+
 }
 
-const list = new ItemsList([
-    new Item('Mango People T-shirt', 152.00, 'img/1.1.png'),
-    new Item('Mango People T-shirt', 152.00, 'img/1.1.png'),
-    new Item('Mango People T-shirt', 152.00, 'img/1.1.png'),
-    new Item('Mango People T-shirt', 152.00, 'img/1.1.png'),
-], document.querySelector('.products-wrap'));
+// const list = new ItemsList([
+//     new Item('Mango People T-shirt', 152.00, 'img/1.1.png'),
+//     new Item('Mango People T-shirt', 152.00, 'img/1.1.png'),
+//     new Item('Mango People T-shirt', 152.00, 'img/1.1.png'),
+//     new Item('Mango People T-shirt', 152.00, 'img/1.1.png'),
+// ], document.querySelector('.products-wrap'));
 
-const cart = new ItemsList([
-    new ItemInCart('Mango People T-shirt', 149.99, 'img/cart-item-img.png', 2),
-    new ItemInCart('Mango People T-shirt', 99.99, 'img/cart-item-img-2.png', 2),
-], document.querySelector('.cart-container'));
+const itemsListData = new ItemsList();
 
-list.renderItemsList();
-cart.renderItemsList();
+itemsListData.fetchItems(() => {
+    itemsListData.$itemsListContainer = document.querySelector('.products-wrap');
+    itemsListData.renderItemsList(Item);
+}, 'http://localhost:5500/Api/catalog.json');
+const cartList = new ItemsList();
+cartList.fetchItems(() => {
+    cartList.$itemsListContainer = document.querySelector('.cart-container');
+    cartList.renderItemsList(ItemInCart);
+    cartList.totalPrice();
+}, 'http://localhost:5500/Api/cart.json');
+console.log(cartList);
 
-document.querySelector('.sub-total').insertAdjacentHTML("beforeend", cart.totalPrice());
+
+
+
+
+
+
+// const cart = new ItemsList([
+//     new ItemInCart('Mango People T-shirt', 149.99, 'img/cart-item-img.png', 1),
+//     new ItemInCart('Mango People T-shirt', 99.99, 'img/cart-item-img-2.png', 2),
+// ], document.querySelector('.cart-container'));
+
+// list.renderItemsList();
+// cart.renderItemsList();
+
+// document.querySelector('.sub-total').insertAdjacentHTML("beforeend", cartList.totalPrice());
 
