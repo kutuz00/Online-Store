@@ -74,7 +74,7 @@ class ItemInCart extends Item {
 }
 class ItemsList {
     constructor(items, container) {
-        this._items = items;
+        this._items = [];
         this._$itemsListContainer = container;
     }
     set $itemsListContainer(container) {
@@ -84,7 +84,7 @@ class ItemsList {
     renderItemsList(ListLocation) {
         let listHtml = '';
         this._items.map(item => {
-            let goodItem = [new ListLocation(item.title, item.price, item.productImgUrl, item.qty)];
+            let goodItem = new ListLocation(item.title, item.price, item.productImgUrl, item.qty);
             listHtml += goodItem.render();
         });
         this._$itemsListContainer.insertAdjacentHTML('afterbegin', listHtml);
@@ -98,8 +98,8 @@ class ItemsList {
         // this._$itemsListContainer.insertAdjacentHTML('afterbegin', itemsList);
     }
     totalPrice() {
-        let sumToCheckout = [];
-        this._items.map(item => sumToCheckout.push(item.getPrice()));
+        console.log(this._items);
+        let sumToCheckout = this._items.map(item => { return item.price * item.qty });
         console.log(sumToCheckout);
         let sum = 0;
 
@@ -136,7 +136,7 @@ cartList.fetchItems(() => {
     cartList.renderItemsList(ItemInCart);
     cartList.totalPrice();
 }, 'http://localhost:5500/Api/cart.json');
-console.log(cartList);
+// console.log(cartList.totalPrice());
 
 
 
@@ -152,5 +152,5 @@ console.log(cartList);
 // list.renderItemsList();
 // cart.renderItemsList();
 
-// document.querySelector('.sub-total').insertAdjacentHTML("beforeend", cartList.totalPrice());
+document.querySelector('.sub-total').insertAdjacentHTML("beforeend", cartList.totalPrice());
 
