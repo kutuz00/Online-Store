@@ -1,20 +1,31 @@
-function makeGETRequest(url, callback) {
-    var xhr;
+function makeGETRequest(url) {
+    return fetch(url).then(json => {
+        return console.log(json.json());
+    });
+    // .then(res => res.json())
+    // .then((items) => console.log(items));
 
-    if (window.XMLHttpRequest) {
-        xhr = new XMLHttpRequest();
-    } else if (window.ActiveXObject) {
-        xhr = new ActiveXObject("Microsoft.XMLHTTP");
-    }
 
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-            callback(xhr.responseText);
-        }
-    }
+    // var xhr;
 
-    xhr.open('GET', url, true);
-    xhr.send();
+    // if (window.XMLHttpRequest) {
+    //     xhr = new XMLHttpRequest();
+    // } else if (window.ActiveXObject) {
+    //     xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    // }
+
+    // xhr.onreadystatechange = function () {
+    //     if (xhr.readyState === 4) {
+    //         callback(xhr.responseText);
+    //     }
+    // }
+
+
+    // const promise = new Promise((resolve, reject) => {
+    //     xhr.open('GET', url, true);
+    //     xhr.send();
+    //     callback();
+    // });
 }
 class Item {
     constructor(title, price, imgUrl) {
@@ -109,10 +120,14 @@ class ItemsList {
         return `<h3>$ ${sum.toFixed(2)}</h3>`;
     }
     fetchItems(callback, url) {
-        makeGETRequest(url, (items) => {
-            this._items = JSON.parse(items);
-            callback();
-        })
+        let data = makeGETRequest(url)
+            .then(() => {
+                console.log('I am 1');
+                // this._items = JSON.parse(items);
+                callback();
+            });
+        data.then(() => console.log(data))
+
     }
 
 }
@@ -134,9 +149,10 @@ const cartList = new ItemsList();
 cartList.fetchItems(() => {
     cartList.$itemsListContainer = document.querySelector('.cart-container');
     cartList.renderItemsList(ItemInCart);
-    cartList.totalPrice();
+    console.log(cartList.totalPrice());
+    document.querySelector('.sub-total').insertAdjacentHTML("beforeend", cartList.totalPrice());
 }, 'http://localhost:5500/Api/cart.json');
-// console.log(cartList.totalPrice());
+
 
 
 
@@ -152,5 +168,5 @@ cartList.fetchItems(() => {
 // list.renderItemsList();
 // cart.renderItemsList();
 
-document.querySelector('.sub-total').insertAdjacentHTML("beforeend", cartList.totalPrice());
+
 
