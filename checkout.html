@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Products</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -12,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css"
         integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <title>Checkout</title>
 </head>
 
 <body>
@@ -408,8 +408,8 @@
 
     </header>
     <section>
-        <article class="content">
-            <header class="sp-banner">
+        <header class="content">
+            <div class="sp-banner">
                 <div class="sp-banner-top container">
                     <h2 class="accent-txt sp-banner-accent sp-banner-left">New Arrivals </h2>
                     <div> <span class="sp-banner-right">Home /</span><span class="sp-banner-right">Men / </span>
@@ -417,405 +417,106 @@
                     </div>
                 </div>
 
-            </header>
-            <aside class="catalog container">
-                <nav>
-                    <details open>
-                        <summary class="producs-menu-category">
-                            Category
-                        </summary>
-                        <ul class="products-menu">
-                            <li>Accessories</li>
-                            <li>Bags</li>
-                            <li>Denim</li>
-                            <li>Hoodies & Sweatshirts</li>
-                            <li>Jackets & Coats</li>
-                            <li>Pants</li>
-                            <li>Polos</li>
-                            <li>Shirts</li>
-                            <li>Shoes</li>
-                            <li>Shorts</li>
-                            <li>Sweaters & Knits</li>
-                            <li>T-Shirts</li>
-                            <li>Tanks</li>
-                        </ul>
+            </div>
+        </header>
+        <div class="accordion container">
 
-                    </details>
-                    <details>
-                        <summary class="producs-menu-category">
-                            BRAND
-                        </summary>
-                        <ul class="products-menu">
-                            <li>Accessories</li>
-                            <li>Bags</li>
-                            <li>Denim</li>
-                            <li>Hoodies & Sweatshirts</li>
-                            <li>Jackets & Coats</li>
-                            <li>Pants</li>
-                            <li>Polos</li>
-                            <li>Shirts</li>
-                            <li>Shoes</li>
-                            <li>Shorts</li>
-                            <li>Sweaters & Knits</li>
-                            <li>T-Shirts</li>
-                            <li>Tanks</li>
-                        </ul>
+            <div class="tab">
+                <input class="tab-input" type="radio" name="accordion" id="shiping-address" checked>
+                <label class="tab-label" for="shiping-address">01. Shipping Adress</label>
+                <div class="tab-content">
+                    <form class="tab-content-guest-chk-out" id="guest-chk-out" action="#">
+                        <h3 class="tab-content-header">Check as a guest or register</h3>
+                        <p>Register with us for future convenience</p>
+                        <div class="tab-content-guest">
+                            <input type="radio" name="guest-chk-out" id="guest"><label
+                                class="tab-content-header tab-content-header_label" for="guest">checkout as
+                                guest</label>
+                        </div>
+                        <div class="tab-content-guest-register">
 
-                    </details>
-                    <details>
-                        <summary class="producs-menu-category">
-                            DESIGNER
-                        </summary>
-                        <ul class="products-menu">
-                            <li>Accessories</li>
-                            <li>Bags</li>
-                            <li>Denim</li>
-                            <li>Hoodies & Sweatshirts</li>
-                            <li>Jackets & Coats</li>
-                            <li>Pants</li>
-                            <li>Polos</li>
-                            <li>Shirts</li>
-                            <li>Shoes</li>
-                            <li>Shorts</li>
-                            <li>Sweaters & Knits</li>
-                            <li>T-Shirts</li>
-                            <li>Tanks</li>
-                        </ul>
+                            <input type="radio" name="guest-chk-out" id="register" checked><label
+                                class=" tab-content-header tab-content-header_label">register</label>
 
-                    </details>
-                </nav>
-                <div class="catalog-wrap">
+                        </div>
 
-                    <form oninput="result.value=(range.value)" class="filters" action="#">
-                        <fieldset class="filter-btns">
-                            <legend class="filter-name">Trending now</legend>
+                        <h3 class="tab-content-header tab-content-header-spacer">register and save time!</h3>
+                        <p>Register with us for future convenience</p>
+                        <p class="tab-content-guest-chk-out-easy"> Fast and easy checkout</p>
+                        <p class="tab-content-guest-chk-out-easy"> Easy access to your order history and status
+                        </p>
+                        <button
+                            class="shoping-cart-buttons-button shoping-cart-buttons-button_continue">Continue</button>
 
-                            <div><button class="filter-btn">Bohemian </button> <span class="filter-btn-line">|</span>
-                                <button class="filter-btn"> Floral
-                                </button> <span class="filter-btn-line">|</span> <button class="filter-btn"> Lace
-                                </button>
-                            </div>
-                            <div><button class="filter-btn">Floral </button> <span class="filter-btn-line">|</span>
-                                <button class="filter-btn"> Lace
-                                </button> <span class="filter-btn-line">|</span> <button class="filter-btn">
-                                    Bohemian </button>
-                            </div>
-                        </fieldset>
-
-                        <fieldset class="filter-btns filter-chk-boxes">
-                            <legend class="filter-name">Size</legend>
-
-
-
-                            <div class="filter-chk-box">
-
-
-                                <div class="chk-box-wrap"> <input class="chk-box" id="xxs" type="checkbox">
-                                    <label for="xxs" class="filter-chk-box-label">XXS</label>
-                                </div>
-                                <div class="chk-box-wrap"><input class="chk-box" id="xs" type="checkbox">
-                                    <label for="xs" class="filter-chk-box-label">XS</label>
-                                </div>
-                                <div class="chk-box-wrap"> <input class="chk-box" id="s" type="checkbox">
-                                    <label for="s" class="filter-chk-box-label">S</label>
-                                </div>
-                                <div class="chk-box-wrap"><input class="chk-box" id="m" type="checkbox">
-                                    <label for="m" class="filter-chk-box-label">M</label>
-                                </div>
-
-
-                            </div>
-                            <div class="filter-chk-box">
-
-                                <div class="chk-box-wrap"> <input class="chk-box" id="l" type="checkbox">
-                                    <label for="l" class="filter-chk-box-label">L</label>
-                                </div>
-                                <div class="chk-box-wrap"> <input class="chk-box" id="xl" type="checkbox">
-                                    <label for="xl" class="filter-chk-box-label">XL</label>
-                                </div>
-                                <div class="chk-box-wrap"> <input class="chk-box" id="xxl" type="checkbox">
-                                    <label for="xxl" class="filter-chk-box-label">XXL</label>
-                                </div>
-
-                            </div>
-
-
-
-                        </fieldset>
-                        <fieldset class="filter-btns">
-                            <legend class="filter-name">Price</legend>
-
-                            <input id="range" type="range" class="filter-range" min="0" max="400" step="1" value="33">
-                            <div class="price-wrap"><label for="range">$0</label>
-                                <output name="result" for="range"></output>
-                                <label for="range">$400</label>
-
-                            </div>
-                        </fieldset>
                     </form>
-                    <div class="sort">
-                        <div class="sort-by-name">
 
-                            <span class="sort-form sort-label">
-                                Sort By
-                            </span>
-                            <form class="sort-form" action="#">
-
-                                <select class="select">
-                                    <option>Name</option>
-                                    <option>1</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                </select>
-                            </form>
+                    <form class="tab-content-member" id="member" action="#">
+                        <h3 class="tab-content-header">Already registed?</h3>
+                        <p>Please log in below</p>
+                        <h4 class="tab-content-header_h4">EMAIL ADDRESS <span
+                                class="tab-content-member-login-form-highlight">*</span></h4>
+                        <input class="tab-content-member-login-form" type="text" required>
+                        <h4 class="tab-content-header_h4">PASSWORD <span
+                                class="tab-content-member-login-form-highlight">*</span></h4>
+                        <input class="tab-content-member-login-form" type="text" required>
+                        <p class="tab-content-member-login-form-highlight">* Required Fileds</p>
+                        <div class="tab-content-member-login-form-login">
+                            <button class="shoping-cart-buttons-login tab-content-member-login-form-login_login">Log
+                                in</button>
+                            <p class="tab-content-member-login-form-login-txt">Forgot Password ?</p>
                         </div>
-                        <div class="sort-by-number">
-                            <span class="sort-form sort-label">
-                                Show
-                            </span>
-                            <form class="sort-form" action="#">
-                                <div class="select-wrap">
-                                    <select class="select">
-                                        <option>Qty</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                    </select>
-                                </div>
-
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="products-wrap">
-                        <div class="product-item">
-                            <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
-                                <div class="item-desc">
-                                    <p class="item-name">Mango People T-shirt</p>
-                                    <p class="item-price">$52.00</p>
-                                </div>
-                            </a>
-                            <div class="add-to-cart">
-                                <a class="add" href="http://google.com"><img src="img/add-to_cart.svg"
-                                        alt="add to cart">
-                                    <p class="add-txt"> Add to cart</p>
-
-                                </a>
 
 
-                            </div>
-                            <div class="add-ons">
-                                <a href="1" class="add"><img src="img/reset.svg" alt="reset"></a>
-                                <a href="2" class="add"><img src="img/like.svg" alt="like"></a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
-                                <div class="item-desc">
-                                    <p class="item-name">Mango People T-shirt</p>
-                                    <p class="item-price">$52.00</p>
-                                </div>
-                            </a>
-                            <div class="add-to-cart">
-                                <a class="add" href="http://google.com"><img src="img/add-to_cart.svg"
-                                        alt="add to cart">
-                                    <p class="add-txt"> Add to cart</p>
-                                </a>
-                            </div>
-                            <div class="add-ons">
-                                <a href="1" class="add"><img src="img/reset.svg" alt="reset"></a>
-                                <a href="2" class="add"><img src="img/like.svg" alt="like"></a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
-                                <div class="item-desc">
-                                    <p class="item-name">Mango People T-shirt</p>
-                                    <p class="item-price">$52.00</p>
-                                </div>
-                            </a>
-                            <div class="add-to-cart">
-                                <a class="add" href="http://google.com"><img src="img/add-to_cart.svg"
-                                        alt="add to cart">
-                                    <p class="add-txt"> Add to cart</p>
-                                </a>
-                            </div>
-                            <div class="add-ons">
-                                <a href="1" class="add"><img src="img/reset.svg" alt="reset"></a>
-                                <a href="2" class="add"><img src="img/like.svg" alt="like"></a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
-                                <div class="item-desc">
-                                    <p class="item-name">Mango People T-shirt</p>
-                                    <p class="item-price">$52.00</p>
-                                </div>
-                            </a>
-                            <div class="add-to-cart">
-                                <a class="add" href="http://google.com"><img src="img/add-to_cart.svg"
-                                        alt="add to cart">
-                                    <p class="add-txt"> Add to cart</p>
-                                </a>
-                            </div>
-                            <div class="add-ons">
-                                <a href="1" class="add"><img src="img/reset.svg" alt="reset"></a>
-                                <a href="2" class="add"><img src="img/like.svg" alt="like"></a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
-                                <div class="item-desc">
-                                    <p class="item-name">Mango People T-shirt</p>
-                                    <p class="item-price">$52.00</p>
-                                </div>
-                            </a>
-                            <div class="add-to-cart">
-                                <a class="add" href="http://google.com"><img src="img/add-to_cart.svg"
-                                        alt="add to cart">
-                                    <p class="add-txt"> Add to cart</p>
-                                </a>
-                            </div>
-                            <div class="add-ons">
-                                <a href="1" class="add"><img src="img/reset.svg" alt="reset"></a>
-                                <a href="2" class="add"><img src="img/like.svg" alt="like"></a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
-                                <div class="item-desc">
-                                    <p class="item-name">Mango People T-shirt</p>
-                                    <p class="item-price">$52.00</p>
-                                </div>
-                            </a>
-                            <div class="add-to-cart">
-                                <a class="add" href="http://google.com"><img src="img/add-to_cart.svg"
-                                        alt="add to cart">
-                                    <p class="add-txt"> Add to cart</p>
-                                </a>
-                            </div>
-                            <div class="add-ons">
-                                <a href="1" class="add"><img src="img/reset.svg" alt="reset"></a>
-                                <a href="2" class="add"><img src="img/like.svg" alt="like"></a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
-                                <div class="item-desc">
-                                    <p class="item-name">Mango People T-shirt</p>
-                                    <p class="item-price">$52.00</p>
-                                </div>
-                            </a>
-                            <div class="add-to-cart">
-                                <a class="add" href="http://google.com"><img src="img/add-to_cart.svg"
-                                        alt="add to cart">
-                                    <p class="add-txt"> Add to cart</p>
-                                </a>
-                            </div>
-                            <div class="add-ons">
-                                <a href="1" class="add"><img src="img/reset.svg" alt="reset"></a>
-                                <a href="2" class="add"><img src="img/like.svg" alt="like"></a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
-                                <div class="item-desc">
-                                    <p class="item-name">Mango People T-shirt</p>
-                                    <p class="item-price">$52.00</p>
-                                </div>
-                            </a>
-                            <div class="add-to-cart">
-                                <a class="add" href="http://google.com"><img src="img/add-to_cart.svg"
-                                        alt="add to cart">
-                                    <p class="add-txt"> Add to cart</p>
-                                </a>
-                            </div>
-                            <div class="add-ons">
-                                <a href="1" class="add"><img src="img/reset.svg" alt="reset"></a>
-                                <a href="2" class="add"><img src="img/like.svg" alt="like"></a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <a class="item-link" href="#"><img class="product-img" src="img/1.1.png" alt="item photo">
-                                <div class="item-desc">
-                                    <p class="item-name">Mango People T-shirt</p>
-                                    <p class="item-price">$52.00</p>
-                                </div>
-                            </a>
-                            <div class="add-to-cart">
-                                <a class="add" href="http://google.com"><img src="img/add-to_cart.svg"
-                                        alt="add to cart">
-                                    <p class="add-txt"> Add to cart</p>
-                                </a>
-                            </div>
-                            <div class="add-ons">
-                                <a href="1" class="add"><img src="img/reset.svg" alt="reset"></a>
-                                <a href="2" class="add"><img src="img/like.svg" alt="like"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <footer class="products-bottom">
-                        <div class="pagination">
-                            <span class="page-num fas fa-chevron-left"></span>
-                            <span class="page-num">1</span><span class="page-num">2</span><span
-                                class="page-num">3</span><span class="page-num">4</span><span
-                                class="page-num">5</span><span class="page-num">6</span><span
-                                class="page-num">7</span><span class="page-num">8</span><span
-                                class="page-num">9</span><span class="page-num">10</span> <span
-                                class="page-num fas fa-chevron-right"></span>
+                    </form>
 
-
-                        </div>
-                        <a class="bottom-button-link" href="#">View All</a>
-                    </footer>
-
-
-
-                </div>
-            </aside>
-
-
-
-
-
-
-
-
-            <footer class="product-footer">
-                <div class="container offer-deteil">
-                    <div class="offer-deteil-wrap"> <img src="img/truck.svg" alt="truck">
-                        <h2>Delivery</h2>
-                        <p> Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-                            extensive
-                            models.</p>
-                    </div>
-                    <div class="offer-deteil-wrap"> <img src="img/discount.svg" alt="discount">
-                        <h2>Sales & discounts</h2>
-                        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-                            extensive
-                            models.</p>
-                    </div>
-                    <div class="offer-deteil-wrap"><img src="img/crown.svg" alt="crown">
-                        <h2>Quality assurance</h2>
-                        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-                            extensive
-                            models.</p>
-                    </div>
 
 
 
                 </div>
 
-            </footer>
-        </article>
+
+            </div>
+            <div class="tab"><input class="tab-input" type="radio" name="accordion" id="billing-info">
+                <label class="tab-label" for="billing-info">02. BILLING INFORMATION</label>
+                <div class="tab-content">
+
+                    <h2>Content</h2>
+                </div>
+            </div>
+            <div class="tab"><input class="tab-input" type="radio" name="accordion" id="shiping-info">
+                <label class="tab-label" for="shiping-info">03. SHIPPING INFORMATION</label>
+                <div class="tab-content">
+
+                    <h2>Content</h2>
+                </div>
+            </div>
+            <div class="tab"><input class="tab-input" type="radio" name="accordion" id="shiping-method">
+                <label class="tab-label" for="shiping-method">04. SHIPPING METHOD</label>
+                <div class="tab-content">
+
+                    <h2>Content</h2>
+                </div>
+            </div>
+            <div class="tab"><input class="tab-input" type="radio" name="accordion" id="payment-method">
+                <label class="tab-label" for="payment-method">05. PAYMENT METHOD</label>
+                <div class="tab-content">
+
+                    <h2>Content</h2>
+                </div>
+            </div>
+            <div class="tab"><input class="tab-input" type="radio" name="accordion" id="order-review">
+                <label class="tab-label" for="order-review">06. ORDER REVIEW</label>
+                <div class="tab-content">
+
+                    <h2>Content</h2>
+                </div>
+            </div>
+
+
+
+        </div>
+
     </section>
-
-
-
 
 
 
@@ -907,6 +608,13 @@
             </div>
         </aside>
     </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
