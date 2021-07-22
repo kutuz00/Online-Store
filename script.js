@@ -1,18 +1,31 @@
 function makeGETRequest(url) {
-    return fetch(url).then(json => {
-        return console.log(json.json());
+    var xhr;
+
+    return new Promise(function (resolve, reject) {
+
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr.open('GET', url, true);
+
+        xhr.onload = function () {
+            if (this.status == 200) {
+                resolve(this.response);
+            } else {
+                var error = new Error(this.statusText);
+                error.code = this.status;
+                reject(error);
+            }
+        };
+
+        xhr.onerror = function () {
+            reject(new Error("Network Error"));
+        };
+
+        xhr.send();
     });
-    // .then(res => res.json())
-    // .then((items) => console.log(items));
-
-
-    // var xhr;
-
-    // if (window.XMLHttpRequest) {
-    //     xhr = new XMLHttpRequest();
-    // } else if (window.ActiveXObject) {
-    //     xhr = new ActiveXObject("Microsoft.XMLHTTP");
-    // }
 
     // xhr.onreadystatechange = function () {
     //     if (xhr.readyState === 4) {
@@ -20,13 +33,19 @@ function makeGETRequest(url) {
     //     }
     // }
 
-
+    // xhr.open('GET', url, true);
+    // xhr.send();
     // const promise = new Promise((resolve, reject) => {
-    //     xhr.open('GET', url, true);
-    //     xhr.send();
-    //     callback();
+    //     // xhr.open('GET', url, true);
+    //     // xhr.send();
+    //     resolve()
     // });
+
+
+    // return promise;
+
 }
+
 class Item {
     constructor(title, price, imgUrl) {
         this._title = title;
@@ -100,73 +119,29 @@ class ItemsList {
         });
         this._$itemsListContainer.insertAdjacentHTML('afterbegin', listHtml);
 
-
-
-        // let itemsList = this. _items.map(
-        //     item => item.render(new Item(item.title, item.price))
-        // ).join(' ');
-
-        // this._$itemsListContainer.insertAdjacentHTML('afterbegin', itemsList);
     }
     totalPrice() {
-        console.log(this._items);
         let sumToCheckout = this._items.map(item => { return item.price * item.qty });
-        console.log(sumToCheckout);
         let sum = 0;
 
         for (let item in sumToCheckout) {
             sum += sumToCheckout[item];
         }
-        return `<h3>$ ${sum.toFixed(2)}</h3>`;
+        return document.querySelector('.sub-total').insertAdjacentHTML("beforeend", `<h3>$ ${sum.toFixed(2)}</h3>`);
     }
-    fetchItems(callback, url) {
-        let data = makeGETRequest(url)
-            .then(() => {
-                console.log('I am 1');
-                // this._items = JSON.parse(items);
-                callback();
-            });
-        data.then(() => console.log(data))
-
+    fetchItems(url, Location, wrap) {
+        return makeGETRequest(url)
+            .then((response) => this._items = JSON.parse(response))
+            .then(() => this._$itemsListContainer = wrap)
+            .then(() => this.renderItemsList(Location))
+            .catch(error => alert(`Rejected: ${error}`));
     }
 
 }
 
-// const list = new ItemsList([
-//     new Item('Mango People T-shirt', 152.00, 'img/1.1.png'),
-//     new Item('Mango People T-shirt', 152.00, 'img/1.1.png'),
-//     new Item('Mango People T-shirt', 152.00, 'img/1.1.png'),
-//     new Item('Mango People T-shirt', 152.00, 'img/1.1.png'),
-// ], document.querySelector('.products-wrap'));
-
 const itemsListData = new ItemsList();
-
-itemsListData.fetchItems(() => {
-    itemsListData.$itemsListContainer = document.querySelector('.products-wrap');
-    itemsListData.renderItemsList(Item);
-}, 'http://localhost:5500/Api/catalog.json');
+itemsListData.fetchItems('http://localhost:5500/Api/catalog.json', Item, itemsListData._$itemsListContainer = document.querySelector('.products-wrap'));
 const cartList = new ItemsList();
-cartList.fetchItems(() => {
-    cartList.$itemsListContainer = document.querySelector('.cart-container');
-    cartList.renderItemsList(ItemInCart);
-    console.log(cartList.totalPrice());
-    document.querySelector('.sub-total').insertAdjacentHTML("beforeend", cartList.totalPrice());
-}, 'http://localhost:5500/Api/cart.json');
-
-
-
-
-
-
-
-
-// const cart = new ItemsList([
-//     new ItemInCart('Mango People T-shirt', 149.99, 'img/cart-item-img.png', 1),
-//     new ItemInCart('Mango People T-shirt', 99.99, 'img/cart-item-img-2.png', 2),
-// ], document.querySelector('.cart-container'));
-
-// list.renderItemsList();
-// cart.renderItemsList();
-
+cartList.fetchItems('http://localhost:5500/Api/cart.json', ItemInCart, document.querySelector('.cart-container')).then(() => cartList.totalPrice());
 
 
