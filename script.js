@@ -143,5 +143,5 @@ const itemsListData = new ItemsList();
 itemsListData.fetchItems('http://localhost:5500/Api/catalog.json', Item, itemsListData._$itemsListContainer = document.querySelector('.products-wrap'));
 const cartList = new ItemsList();
 cartList.fetchItems('http://localhost:5500/Api/cart.json', ItemInCart, document.querySelector('.cart-container')).then(() => cartList.totalPrice());
-
+//Next Lesson
 
