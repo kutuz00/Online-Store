@@ -131,7 +131,7 @@ cartList.fetchItems('http://localhost:5500/Api/cart.json', ItemInCart, document.
 
 //Next Lesson
 
-const pattern = /^'|'$/gm;
+const pattern = new RegExp(/^'|'$/gm);
 const str = "'I'm sorry if it upsets you, but I'm going to marry her.'";
 console.log(str.replace(pattern, '"'));
 
@@ -141,8 +141,14 @@ const subscribeEmail = document.querySelector(".subscribe-form-input");
 subscribeButton.addEventListener('click', (e) => {
     const value = subscribeEmail.value;
     if (!isValidEmail.test(value)) {
+
+        subscribeEmail.setAttribute("style", "border: 1px solid red");
         alert("Wrong email format");
-        subscribeEmail.setAttribute("style", "border: 1px solid red")
+    } else {
+
+        subscribeEmail.removeAttribute("style", "border: 1px solid red");
+        alert("Thank you for subscribing");
     }
 });
 
+// Next Lesson
