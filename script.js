@@ -27,22 +27,6 @@ function makeGETRequest(url) {
         xhr.send();
     });
 
-    // xhr.onreadystatechange = function () {
-    //     if (xhr.readyState === 4) {
-    //         callback(xhr.responseText);
-    //     }
-    // }
-
-    // xhr.open('GET', url, true);
-    // xhr.send();
-    // const promise = new Promise((resolve, reject) => {
-    //     // xhr.open('GET', url, true);
-    //     // xhr.send();
-    //     resolve()
-    // });
-
-
-    // return promise;
 
 }
 
@@ -143,5 +127,22 @@ const itemsListData = new ItemsList();
 itemsListData.fetchItems('http://localhost:5500/Api/catalog.json', Item, itemsListData._$itemsListContainer = document.querySelector('.products-wrap'));
 const cartList = new ItemsList();
 cartList.fetchItems('http://localhost:5500/Api/cart.json', ItemInCart, document.querySelector('.cart-container')).then(() => cartList.totalPrice());
+
+
 //Next Lesson
+
+const pattern = /^'|'$/gm;
+const str = "'I'm sorry if it upsets you, but I'm going to marry her.'";
+console.log(str.replace(pattern, '"'));
+
+const isValidEmail = /.+\@.+\..+/;
+const subscribeButton = document.querySelector(".subscribe-form-button");
+const subscribeEmail = document.querySelector(".subscribe-form-input");
+subscribeButton.addEventListener('click', (e) => {
+    const value = subscribeEmail.value;
+    if (!isValidEmail.test(value)) {
+        alert("Wrong email format");
+        subscribeEmail.setAttribute("style", "border: 1px solid red")
+    }
+});
 
