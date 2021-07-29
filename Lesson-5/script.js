@@ -22,7 +22,7 @@ const app = new Vue({
         }
     },
     mounted() {
-        fetch('http://127.0.0.1:5500/catalog.json').then(responce => responce.json())
+        fetch('http://127.0.0.1:5500/Lesson-5/catalog.json').then(responce => responce.json())
             .then((responce) => this.items = responce)
             .then((responce) => this.filteredItems = responce);
     }
