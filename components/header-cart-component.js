@@ -37,4 +37,4 @@ Vue.component('header-cart-component', {
     //     },
     // }
 });
-console.log(Vue.cart);
+console.log(Vue);
