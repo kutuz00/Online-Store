@@ -1,0 +1,22 @@
+{
+  "name": "online-store",
+  "version": "1.0.0",
+  "description": "GeekBrains lessons",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kutuz00/Online-Store.git"
+  },
+  "author": "Kostyantyn Beskrovnyy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kutuz00/Online-Store/issues"
+  },
+  "homepage": "https://github.com/kutuz00/Online-Store#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
